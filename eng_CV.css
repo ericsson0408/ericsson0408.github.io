@@ -10,3 +10,12 @@ p {
 #TOP {
 background-color: powderblue;
 }
+#LeftPart {
+background-color: rgba(0,255,0,0.3);
+}
+#RightPart {
+background-color: rgba(255,0,0,0.3);
+}
+#Down {
+background-color: rgba(255,255,255,0.3);
+}
