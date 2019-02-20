@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To have title</title>
+  </head>
+  <body>
+    <h1>Data</h1>
+    <p>title for title
+    h1 for head 1 etc.
+    p for paragraph
+    a href="website for hyperlink
+    </p>
+    <a href="https://www.w3schools.com">This is a link</a>
+    <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+  </body>
+</html>
