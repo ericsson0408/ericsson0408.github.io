@@ -1,23 +1,11 @@
 #TOP{
-　background-color:#FFD4D4;
-　height:200px;
-　text-align:center;
-　line-height:80px;
+　background-color: powderblue
 }
 #LeftPart{
-　background-color:#FFECC9;
-　width:50%;
-　text-align:center;
-　float:left;
+　color: blue;
 }
 #RightPart{
-　background-color:#FFECC9;
-　width:50%;
-　text-align:center;
-　float:right;
+　color: red;
 }
 #Down{
-　clear:both;
-　background-color:#FFD4D4;
-　text-align:center;
 }
