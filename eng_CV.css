@@ -12,11 +12,11 @@ background-color: powderblue;
 }
 #LeftPart {
 background-color: rgba(0,255,0,0.3);
-width= "50%";
+width: 50%;
 }
 #RightPart {
 background-color: rgba(255,0,0,0.3);
-width= "50%";
+width= 50%;
 float: left;
 }
 #Down {
