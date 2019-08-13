@@ -3,6 +3,6 @@ function myFunction() {
 }
 document.getElementById("cal").innerHTML = 0;
 function Function(){
-  document.getElementById("cal").innerHTML += 1;
+  document.getElementById("cal").innerHTML = parseInt(document.getElementById("cal").innerHTML) + 1;
 
 }
