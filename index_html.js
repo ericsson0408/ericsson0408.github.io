@@ -1,8 +1,8 @@
 function myFunction() {
   document.getElementById("demo").innerHTML = "Paragraph changed.";
 }
-var a = 10;
+document.getElementById("cal").innerHTML = 0;
 function Function(){
-a+=1;
-document.write(a);
+  document.getElementById("cal").innerHTML += 1;
+
 }
