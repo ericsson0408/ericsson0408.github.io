@@ -10,5 +10,5 @@ function add() {
     document.getElementById('result').value =  a+b ; 
 }
 function plus() {
-    document.getElementById('candy').value += parseInt(document.getElementById("candy").value) 1 ; 
+    document.getElementById('candy').value = parseInt(document.getElementById("candy").value) 1 ; 
 }
