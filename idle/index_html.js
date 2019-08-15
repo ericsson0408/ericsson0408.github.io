@@ -1,3 +1,3 @@
 function plus() {
-    document.getElementById("candy").value = parseInt(document.getElementById("candy").value) + 1; 
+    document.getElementById("money").value = parseInt(document.getElementById("money").value) + 1; 
 }
