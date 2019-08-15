@@ -1,6 +1,7 @@
 var Hunt = 0;
+var Meat = 0;
 function gather() {
-    document.getElementById("meat").value = parseInt(document.getElementById("meat").value) + 1; 
+    document.getElementById("meat").value = parseInt(Meat) + 1; 
 }
 function hunt() {
     Hunt = Hunt +1;
