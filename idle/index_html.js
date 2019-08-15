@@ -1,9 +1,9 @@
-var hunt = 0
+var hunt = 0;
 function gather() {
     document.getElementById("meat").value = parseInt(document.getElementById("meat").value) + 1; 
 }
 function hunt() {
-    hunt+=1
+    hunt+=1;
     document.getElementById("hunt").value = hunt;
     document.getElementById("meat").value = parseInt(document.getElementById("meat").value) - 10; 
 }
