@@ -3,5 +3,9 @@ function myFunction() {
 }
 function Function(){
   document.getElementById("cal").innerHTML = parseInt(document.getElementById("cal").innerHTML) + 1;
-
+}
+function add() {
+    var a = parseInt(document.getElementById('a').value);
+    var b = parseInt(document.getElementById('b').value);
+    document.getElementById('result').value =  a+b ; 
 }
