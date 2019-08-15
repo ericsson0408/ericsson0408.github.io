@@ -5,12 +5,14 @@ function gather() {
     document.getElementById("meat").value = parseInt(Meat); 
 }
 function hunt() {
-    Hunt = Hunt +1;
-    document.getElementById("hunt").value = parseInt(Hunt) + 1; 
-    document.getElementById("meat").value = parseInt(document.getElementById("meat").value) - 10; 
+    Hunt = Hunt + 1;
+    Meat = Meat - 10;
+    document.getElementById("hunt").value = parseInt(Hunt); 
+    document.getElementById("meat").value = parseInt(Meat);
+    
 }
 var myVar = setInterval(myTimer, 1000);
 function myTimer() {
-    document.getElementById("meat").value = parseInt(document.getElementById("meat").value) + 1*Hunt ;
+    document.getElementById("meat").value = parseInt(Meat) + 1 * Hunt ;
 }
 
