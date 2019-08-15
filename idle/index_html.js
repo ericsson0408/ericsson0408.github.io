@@ -13,6 +13,7 @@ function hunt() {
 }
 var myVar = setInterval(myTimer, 1000);
 function myTimer() {
-    document.getElementById("meat").value = parseInt(Meat) + 1 * Hunt ;
+    Meat = Meat + Hunt;
+    document.getElementById("meat").value = parseInt(Meat);
 }
 
