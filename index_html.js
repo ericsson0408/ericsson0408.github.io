@@ -9,6 +9,6 @@ function add() {
     var b = parseInt(document.getElementById('b').value);
     document.getElementById('result').value =  a+b ; 
 }
-function candy() {
-    document.getElementById('result').value += 1 ; 
+function plus() {
+    document.getElementById('candy').value += 1 ; 
 }
