@@ -1,5 +1,6 @@
 function myFunction() {
-  <img src="tiles.png" alt="">
+  var tile=document.createElement("img");
+  tile.src="tiles.png";
 }
 function Function(){
   document.getElementById("cal").innerHTML = parseInt(document.getElementById("cal").innerHTML) + 1;
