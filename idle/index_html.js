@@ -20,7 +20,8 @@ function hunt() {
 }
 
 var myVar = setInterval(myTimer, 100);
-function myTimer() {
+function myTimer()
+{
     Meat = Meat + Hunt * 0.1;
     document.getElementById("meat").value = parseInt(Meat);
     if(document.getElementById("human").value <= Hut )
@@ -28,4 +29,5 @@ function myTimer() {
         Human = Human + 0.01;
         document.getElementById("human").value=parseInt(Human);
     }
+}
 
