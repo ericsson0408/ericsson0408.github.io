@@ -1,5 +1,5 @@
 function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
+  <img src="tiles.png" alt="">
 }
 function Function(){
   document.getElementById("cal").innerHTML = parseInt(document.getElementById("cal").innerHTML) + 1;
