@@ -13,4 +13,5 @@ a{
 }
 #img1{
   transform:rotate(270deg);
+  width:100%;
 }
