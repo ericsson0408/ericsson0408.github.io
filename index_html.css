@@ -13,7 +13,11 @@ a{
   color:black;
 }
 #img01{
-  width:1000px;
+    border-radius: 8px;
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 table {
     border-radius: 8px;
