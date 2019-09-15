@@ -40,3 +40,24 @@ td {
 td:hover{
 	color:#FF0000;
 }
+#link1{
+		position: relative;
+    border-radius: 8px;
+		border-style:solid;
+    border-width:3px;
+}
+#link2{
+		position: relative;
+    border-radius: 8px;
+		border-style:solid;
+    border-width:3px;
+}
+#link3{
+		position: relative;
+    border-radius: 8px;
+		border-style:solid;
+    border-width:3px;
+}
+
+
+
