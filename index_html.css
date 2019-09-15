@@ -11,3 +11,6 @@ a{
   text-decoration:none;
   color:black;
 }
+#img1{
+  transform:rotate(90deg);
+}
