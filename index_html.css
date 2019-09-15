@@ -14,7 +14,7 @@ a{
 #img01{
     border-radius: 8px;
     height: auto;
-    max-width: 1050px;
+    max-width:100%;
     margin: auto;
 }
 table {
