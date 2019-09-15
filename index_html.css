@@ -36,3 +36,6 @@ td {
     padding: 0px;
     color: #46a3ff;
 }
+td:hover{
+	color:#FF0000;
+}
