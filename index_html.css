@@ -40,6 +40,10 @@ td {
 td:hover{
 	color:#FF0000;
 }
+#block{
+		position: relative;
+
+}
 #link1{
 		position: relative;
     border-radius: 8px;
