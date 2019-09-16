@@ -52,6 +52,7 @@ div{margin:5px;border:0;padding:0;}
 		border-style:solid;
     border-width:3px;
 		width:30%;
+		float:left;
 }
 #link2{
 		position: relative;
@@ -59,12 +60,14 @@ div{margin:5px;border:0;padding:0;}
 		border-style:solid;
     border-width:3px;
 		width:30%;
+		float:left;
 }
 #link3{
     border-radius: 8px;
 		border-style:solid;
     border-width:3px;
 		width:30%;
+		float:left;
 }
 
 
