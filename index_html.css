@@ -1,31 +1,31 @@
 body {
-  background-color: powderblue;
-  background-image: url("背景.png");
+  	background-color: powderblue;
+  	background-image: url("背景.png");
 }
 h1 {
-  color: blue;
+  	color: blue;
 }
 p {
-  color: black;
+  	color: black;
 	font-family: 標楷體;
 }
 a{
-  text-decoration:none;
-  color:black;
-  font-size: 25px;
+  	text-decoration:none;
+  	color:black;
+  	font-size: 25px;
 }
 #img01{
-    border-radius: 8px;
-    height: auto;
-    max-width:100%;
-    margin: auto;
+    	border-radius: 8px;
+    	height: auto;
+    	max-width:100%;
+   	 margin: auto;
 }
 table {
-    border-radius: 8px;
-    font-family: 'Noto Sans TC', sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(100%, 100%, 100%, 0.6);
+    	border-radius: 8px;
+    	font-family: 'Noto Sans TC', sans-serif;
+    	margin-left: auto;
+    	margin-right: auto;
+    	background-color: rgba(100%, 100%, 100%, 0.6);
 }
 td {
     border-radius: 8px;
@@ -42,44 +42,44 @@ td:hover{
 	color:#FF0000;
 }
 #block{
-		position: relative;
+	position: relative;
 	
 }
 div{margin:5px;border:0;padding:0;}
 
 #link1{
-		position: relative;
-    border-radius: 8px;
-		border-style:solid;
-    border-width:3px;
-		width:23%;
-		float:left;
+	position: relative;
+    	border-radius: 8px;
+	border-style:solid;
+    	border-width:3px;
+	width:23%;
+	float:left;
 }
 #link2{
-		position: relative;
-    border-radius: 8px;
-		border-style:solid;
-    border-width:3px;
-		width:23%;
-		float:left;
+	position: relative;
+    	border-radius: 8px;
+	border-style:solid;
+    	border-width:3px;
+	width:23%;
+	float:left;
 }
 #link3{
-    border-radius: 8px;
-		border-style:solid;
-    border-width:3px;
-		width:23%;
-		float:left;
+    	border-radius: 8px;
+	border-style:solid;
+    	border-width:3px;
+	width:23%;
+	float:left;
 }
 #link4{
-		position: relative;
-    border-radius: 8px;
-		border-style:solid;
-    border-width:3px;
-		width:23%;
-		float:left;
+	position: relative;
+    	border-radius: 8px;
+	border-style:solid;
+    	border-width:3px;
+	width:23%;
+	float:left;
 }
 #resume{
-		display:none;
+	display:none;
 }
 
 
