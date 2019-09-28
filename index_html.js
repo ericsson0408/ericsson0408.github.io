@@ -1,8 +1,8 @@
 function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
 }
 function Function(){
-  document.getElementById("cal").innerHTML = parseInt(document.getElementById("cal").innerHTML) + 1;
+    document.getElementById("cal").innerHTML = parseInt(document.getElementById("cal").innerHTML) + 1;
 }
 function add() {
     var a = parseInt(document.getElementById('a').value);
@@ -11,4 +11,9 @@ function add() {
 }
 function plus() {
     document.getElementById("candy").value = parseInt(document.getElementById("candy").value) + 1; 
+}
+function check(){
+    if (document.getElementById('pass').innerHTML == "890408"){
+      document.getElementById('resume').style.display="block"
+    }
 }
