@@ -78,6 +78,8 @@ div{margin:5px;border:0;padding:0;}
 		width:23%;
 		float:left;
 }
-
+#resume{
+		display:none;
+}
 
 
