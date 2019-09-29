@@ -13,7 +13,7 @@ function plus() {
     document.getElementById("candy").value = parseInt(document.getElementById("candy").value) + 1; 
 }
 function check(){
-    if (document.getElementById('pass').value == "890408"){
+    if (document.getElementById('pass').value == "040889"){
       document.getElementById('resume').style.display="block"
     }
     else{alert("輸入錯誤")}
