@@ -14,10 +14,14 @@ function plus() {
 }
 function check(){
     if (document.getElementById('pass').value == "040889"){
-      document.getElementById('resume').style.display="block"
+      document.getElementById('resume').style.display="block";
     }
     else{alert("輸入錯誤")}
 }
 function CP1(){
-    document.getElementById('CP1').style.display="block"
+    if( document.getElementById('CP1').style.display="block"){
+    document.getElementById('CP1').style.display="none";
+    }
+    else{document.getElementById('CP1').style.display="block";}
+    
 }
