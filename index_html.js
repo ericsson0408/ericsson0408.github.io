@@ -18,3 +18,6 @@ function check(){
     }
     else{alert("輸入錯誤")}
 }
+function CP1(){
+    document.getElementById('CP1').style.display="block"
+}
