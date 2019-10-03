@@ -3,19 +3,22 @@ var Today=new Date();
 var Year=Today.getFullYear();
 var Month=Today.getMonth()+1;
 var Date=Today.getDate();
-var Days=0;
-if (Month=='2'){Days+=31;}
-if (Month=='3'){Days+=59;}
-if (Month=='4'){Days+=90;}
-if (Month=='5'){Days+=120;}
-if (Month=='6'){Days+=151;}
-if (Month=='7'){Days+=181;}
-if (Month=='8'){Days+=212;}
-if (Month=='9'){Days+=243;}
-if (Month=='10'){Days+=273;}
-if (Month=='11'){Days+=304;}
-if (Month=='12'){Days+=334;}
-Days+=Date;
+function Days(){
+var Day=0;
+if (Month=='2'){Day+=31;}
+if (Month=='3'){Day+=59;}
+if (Month=='4'){Day+=90;}
+if (Month=='5'){Day+=120;}
+if (Month=='6'){Day+=151;}
+if (Month=='7'){Day+=181;}
+if (Month=='8'){Day+=212;}
+if (Month=='9'){Day+=243;}
+if (Month=='10'){Day+=273;}
+if (Month=='11'){Day+=304;}
+if (Month=='12'){Days
++=334;}
+Day+=Date;
+} 
 
 function CD1(){
 var a=document.getElementById("D1").innerHTML;
