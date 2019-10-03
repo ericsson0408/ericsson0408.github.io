@@ -1,3 +1,8 @@
 
 var Today=new Date();
-document.getElementById("CD1").innerHTML="今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日";
+var Year=Today.getFullYear();
+var Month=Today.getMonth()+1;
+var Date=Today.getDate();
+function CD1(){
+document.getElementById("CD1").innerHTML="今天日期是"+Year+"年"+Month+"月"+Date+"日";
+}
