@@ -3,7 +3,7 @@ var Today=new Date();
 var YearT=Today.getFullYear();
 var MonthT=Today.getMonth()+1;
 var DateT=Today.getDate();
-function Days(Month, Date){
+function Days( Month , Date){
 var Day=0;
 if (Month=='2'){Day+=31;}
 if (Month=='3'){Day+=59;}
@@ -19,7 +19,7 @@ if (Month=='12'){Days+=334;}
 Day+=Date;
 return Day;
 } 
-var DayT=Days(MonthT+DateT);
+var DayT=Days(MonthT, DateT);
 
 function CD1(){
 var a=document.getElementById("D1").innerHTML;
