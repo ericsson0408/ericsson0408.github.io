@@ -2,14 +2,10 @@ body {
   	background-color: powderblue;
   	background-image: url("背景.png");
 }
-h1 {
-  	color: blue;
-}
 p {
   	color: black;
 	font-size: 16px;
 	font-family: 標楷體;
-	
 }
 a{
   	text-decoration:none;
@@ -46,30 +42,8 @@ td:hover{
 }
 #block{
 	position: relative;
-	
 }
-div{margin:5px;border:0;padding:0;}
 
 #resume{
 	display:none;
 }
-
-.link{
-	position: relative;
-    	border-radius: 8px;
-	border-style:solid;
-    	border-width:3px;
-	width:23%;
-	float:left;
-	font-family:Calibri,"標楷體";
-}    
-.CP{
-	display:none;
-}
-#CPall{
-	display:none;
-}
-#DXIIall{
-	display:none;
-}
-
