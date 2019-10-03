@@ -1,9 +1,9 @@
 
 var Today=new Date();
-var Year=Today.getFullYear();
-var Month=Today.getMonth()+1;
-var Date=Today.getDate();
-function Days(){
+var YearT=Today.getFullYear();
+var MonthT=Today.getMonth()+1;
+var DateT=Today.getDate();
+function Days(Month, Date){
 var Day=0;
 if (Month=='2'){Day+=31;}
 if (Month=='3'){Day+=59;}
@@ -15,17 +15,19 @@ if (Month=='8'){Day+=212;}
 if (Month=='9'){Day+=243;}
 if (Month=='10'){Day+=273;}
 if (Month=='11'){Day+=304;}
-if (Month=='12'){Days
-+=334;}
+if (Month=='12'){Days+=334;}
 Day+=Date;
+return Day;
 } 
+var DayT=Days(MonthT+DateT);
 
 function CD1(){
 var a=document.getElementById("D1").innerHTML;
-Year_1=parseInt(a[0]+a[1]+a[2]);
-Month_1=parseInt(a[4]+a[5]);
-Date_1=parseInt(a[7]+a[8]);
-document.getElementById("CD1").innerHTML=Days;
+var Year_1=parseInt(a[0]+a[1]+a[2]);
+var Month_1=parseInt(a[4]+a[5]);
+var Date_1=parseInt(a[7]+a[8]);
+var count=Days(Month_1,Date_1)-DayT;
+document.getElementById("CD1").innerHTML="倒數"+count+"天";
 }
 function CD2(){
 document.getElementById("CD2").innerHTML="今天日期是"+Year+"年"+Month+"月"+Date+"日";
