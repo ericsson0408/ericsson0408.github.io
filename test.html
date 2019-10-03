@@ -8,14 +8,14 @@
   </head>
   
   <body>
-<input type='button' name='dt_qty[]' onclick='updateSum(this)' value='1'>
-<input type='button' name='dt_qty[]' onclick='updateSum(this)' value='2'>
-<input type='button' name='dt_qty[]' onclick='updateSum(this)' value='3'>
-<input type='button' name='dt_qty[]' onclick='updateSum(this)' value='4'>
+<input type='button' name='A[1]' onclick='updateSum(this)' value='1'>
+<input type='button' name='A[2]' onclick='updateSum(this)' value='2'>
+<input type='button' name='A[3]' onclick='updateSum(this)' value='3'>
+<input type='button' name='A[4]' onclick='updateSum(this)' value='4'>
 
 <script>
-function updateSum(e){
-    alert($(e).index());
+function updateSum(this){
+    alert(this.name);
 }
 </script>
 </body>
