@@ -31,3 +31,9 @@ function HK1(){
     }
     else{document.getElementById('HK1').style.display="block";}  
 }
+function HK2(){
+    if( document.getElementById('HK2').style.display=="block"){
+    document.getElementById('HK2').style.display="none";
+    }
+    else{document.getElementById('HK2').style.display="block";}  
+}
