@@ -34,7 +34,7 @@ function CD2(){
 var b=document.getElementById("D2").innerHTML;
 var Year_2=parseInt(b[0]+b[1]+b[2]);
 var Month_2=parseInt(b[4]+b[5]);
-var Date_2=parseInt(b[7]+a[b]);
+var Date_2=parseInt(b[7]+b[8]);
 var count_2=Days(Month_2,Date_2)-DayT;
 document.getElementById("CD2").innerHTML="倒數"+ count_2 +"天";
 }
