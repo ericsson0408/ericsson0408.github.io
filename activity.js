@@ -41,5 +41,5 @@ function CD3(){
 document.getElementById("CD3").innerHTML="倒數"+ Count("D3") +"天";
 }
 function CD4(){
-document.getElementById("CD4").innerHTML="倒數"+ Count("D3") +"天";
+document.getElementById("CD4").innerHTML="倒數"+ Count("D4") +"天";
 }
