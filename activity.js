@@ -20,7 +20,14 @@ Day+=Date;
 return Day;
 } 
 
-var DayT=Days(MonthT, DateT);
+function Count(id){
+var a=document.getElementById(id).innerHTML;
+var CYear=parseInt(a[0]+a[1]+a[2]);
+var CMonth=parseInt(a[4]+a[5]);
+var CDate=parseInt(a[7]+a[8]);
+var Ccount=(CYear-108)*365+Days(CMonth,CDate)-Days(MonthT, DateT);
+return Ccount;
+}
 
 function CD1(){
 var a=document.getElementById("D1").innerHTML;
@@ -30,6 +37,7 @@ var Date_1=parseInt(a[7]+a[8]);
 var count_1=Days(Month_1,Date_1)-DayT;
 document.getElementById("CD1").innerHTML="倒數"+ count_1 +"天";
 }
+
 function CD2(){
 var b=document.getElementById("D2").innerHTML;
 var Year_2=parseInt(b[0]+b[1]+b[2]);
@@ -38,8 +46,9 @@ var Date_2=parseInt(b[7]+b[8]);
 var count_2=(Year_2-108)*365+Days(Month_2,Date_2)-DayT;
 document.getElementById("CD2").innerHTML="倒數"+ count_2 +"天";
 }
+
 function CD3(){
-document.getElementById("CD3").innerHTML="今天日期是"+YearT+"年"+MonthT+"月"+DateT+"日";
+document.getElementById("CD2").innerHTML="倒數"+ Count("D3") +"天";
 }
 function CD4(){
 document.getElementById("CD4").innerHTML="今天日期是"+YearT+"年"+MonthT+"月"+DateT+"日";
