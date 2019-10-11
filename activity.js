@@ -1,8 +1,8 @@
-
 var Today=new Date();
 var YearT=Today.getFullYear();
 var MonthT=Today.getMonth()+1;
 var DateT=Today.getDate();
+
 function Days(Month, Date){
 var Day=0;
 if (Month=='2'){Day+=31;}
@@ -15,10 +15,11 @@ if (Month=='8'){Day+=212;}
 if (Month=='9'){Day+=243;}
 if (Month=='10'){Day+=273;}
 if (Month=='11'){Day+=304;}
-if (Month=='12'){Days+=334;}
+if (Month=='12'){Day+=334;}
 Day+=Date;
 return Day;
 } 
+
 var DayT=Days(MonthT, DateT);
 
 function CD1(){
