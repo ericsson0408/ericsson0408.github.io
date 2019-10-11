@@ -28,7 +28,7 @@ var Year_1=parseInt(a[0]+a[1]+a[2]);
 var Month_1=parseInt(a[4]+a[5]);
 var Date_1=parseInt(a[7]+a[8]);
 var count=Days(Month_1,Date_1)-DayT;
-document.getElementById("CD1").innerHTML="倒數"+DayT+"天"+;
+document.getElementById("CD1").innerHTML="倒數"+DayT+"天";
 }
 function CD2(){
 document.getElementById("CD2").innerHTML="今天日期是"+YearT+"年"+MonthT+"月"+DateT+"日";
