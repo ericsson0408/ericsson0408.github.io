@@ -4,22 +4,23 @@ function BTall(a){
     document.getElementById(com).style.display="none";
     }
     else{document.getElementById(com).style.display="block";} 
-}   
+}
+function BT(a){
+    var com=a;
+    if( document.getElementById(com).style.display=="block"){
+    document.getElementById(com).style.display="none";
+    }
+    else{document.getElementById(com).style.display="block";} 
+} 
 
 function CP(){
     BTall("CP");
 }
 function CP1(){
-    if( document.getElementById('CP1').style.display=="block"){
-    document.getElementById('CP1').style.display="none";
-    }
-    else{document.getElementById('CP1').style.display="block";}  
+    BT("CP1");
 }
 function CP2(){
-    if( document.getElementById('CP2').style.display=="block"){
-    document.getElementById('CP2').style.display="none";
-    }
-    else{document.getElementById('CP2').style.display="block";}  
+    BT("CP2");
 }
 
 
