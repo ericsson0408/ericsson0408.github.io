@@ -13,23 +13,10 @@ function BT(a){
     else{document.getElementById(com).style.display="block";} 
 } 
 
-function CP(){
-    BTall("CP");
-}
-function CP1(){
-    BT("CP1");
-}
-function CP2(){
-    BT("CP2");
-}
-
-
-function DXII(){
-    if( document.getElementById('DXIIall').style.display=="block"){
-    document.getElementById('DXIIall').style.display="none";
-    }
-    else{document.getElementById('DXIIall').style.display="block";}  
-}
+function CP(){  BTall("CP");    }
+function CP1(){ BT("CP1");      }
+function CP2(){ BT("CP2");      }
+function DXII(){BTall("DXII");  }
 
 function HK1(){
     if( document.getElementById('HK1').style.display=="block"){
