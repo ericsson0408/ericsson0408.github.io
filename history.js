@@ -16,65 +16,20 @@ function BT(a){
 function CP(){  BTall("CP");    }
 function CP1(){ BT("CP1");      }
 function CP2(){ BT("CP2");      }
+
 function DXII(){BTall("DXII");  }
 
-function HK1(){
-    if( document.getElementById('HK1').style.display=="block"){
-    document.getElementById('HK1').style.display="none";
-    }
-    else{document.getElementById('HK1').style.display="block";}  
-}
-function HK2(){
-    if( document.getElementById('HK2').style.display=="block"){
-    document.getElementById('HK2').style.display="none";
-    }
-    else{document.getElementById('HK2').style.display="block";}  
-}
-function RE(){
-    if( document.getElementById('REall').style.display=="block"){
-    document.getElementById('REall').style.display="none";
-    }
-    else{document.getElementById('REall').style.display="block";}  
-}
-function RE1(){
-    if( document.getElementById('RE1').style.display=="block"){
-    document.getElementById('RE1').style.display="none";
-    }
-    else{document.getElementById('RE1').style.display="block";}  
-}
-function RE2(){
-    if( document.getElementById('RE2').style.display=="block"){
-    document.getElementById('RE2').style.display="none";
-    }
-    else{document.getElementById('RE2').style.display="block";}  
-}
-function RE3(){
-    if( document.getElementById('RE3').style.display=="block"){
-    document.getElementById('RE3').style.display="none";
-    }
-    else{document.getElementById('RE3').style.display="block";}  
-}
-function RE4(){
-    if( document.getElementById('RE4').style.display=="block"){
-    document.getElementById('RE4').style.display="none";
-    }
-    else{document.getElementById('RE4').style.display="block";}  
-}
-function RE5(){
-    if( document.getElementById('RE5').style.display=="block"){
-    document.getElementById('RE5').style.display="none";
-    }
-    else{document.getElementById('RE5').style.display="block";}  
-}
-function RE6(){
-    if( document.getElementById('RE6').style.display=="block"){
-    document.getElementById('RE6').style.display="none";
-    }
-    else{document.getElementById('RE6').style.display="block";}  
-}
-function RE7(){
-    if( document.getElementById('RE7').style.display=="block"){
-    document.getElementById('RE7').style.display="none";
-    }
-    else{document.getElementById('RE7').style.display="block";}  
-}
+function RE(){  BTall("RE");    }
+function RE1(){ BT("RE1");      }
+function RE2(){ BT("RE2");      }
+function RE3(){ BT("RE3");      }
+function RE4(){ BT("RE4");      }
+function RE5(){ BT("RE5");      }
+function RE6(){ BT("RE6");      }
+function RE7(){ BT("RE7");      }
+
+function HK1(){ BT("HK1");      }
+function HK2(){ BT("HK2");      }
+
+
+    
