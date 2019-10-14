@@ -1,8 +1,13 @@
-function CP(){
-    if( document.getElementById('CPall').style.display=="block"){
-    document.getElementById('CPall').style.display="none";
+function BTall(a){
+    var com=a+'all';
+    if( document.getElementById(com).style.display=="block"){
+    document.getElementById(com).style.display="none";
     }
-    else{document.getElementById('CPall').style.display="block";}  
+    else{document.getElementById(com).style.display="block";} 
+}   
+
+function CP(){
+    BTall("CP");
 }
 function CP1(){
     if( document.getElementById('CP1').style.display=="block"){
