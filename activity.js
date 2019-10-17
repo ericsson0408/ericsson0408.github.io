@@ -29,18 +29,10 @@ var Ccount=(CYear-108)*365+Days(CMonth,CDate)-Days(MonthT, DateT);
 return Ccount;
 }
 
-function CD1(){
+function CD(){
 document.getElementById("CD1").innerHTML="倒數"+ Count("D1") +"天";
-}
-function CD2(){
 document.getElementById("CD2").innerHTML="倒數"+ Count("D2") +"天";
-}
-function CD3(){
 document.getElementById("CD3").innerHTML="倒數"+ Count("D3") +"天";
-}
-function CD4(){
 document.getElementById("CD4").innerHTML="倒數"+ Count("D4") +"天";
-}
-function CD5(){
 document.getElementById("CD5").innerHTML="倒數"+ Count("D5") +"天";
 }
