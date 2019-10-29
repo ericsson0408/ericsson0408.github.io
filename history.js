@@ -16,6 +16,7 @@ function BT(a){
 function CP(){  BTall("CP");    }
 function CP1(){ BT("CP1");      }
 function CP2(){ BT("CP2");      }
+function CP3(){ BT("CP3");      }
 
 function OC(){ BTall("OC");     }
 function OC1(){ BT("OC1");      }
