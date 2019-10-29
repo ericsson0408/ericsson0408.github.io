@@ -46,6 +46,6 @@ function RE7(){ BT("RE7");      }
 
 function HK1(){ BT("HK1");      }
 function HK2(){ BT("HK2");      }
-
+function HK3(){ BT("HK3");      }
 
     
