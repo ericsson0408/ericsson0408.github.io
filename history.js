@@ -12,6 +12,19 @@ function BT(a){
     }
     else{document.getElementById(com).style.display="block";} 
 } 
+function MC(){  BTall("MC");    }
+function MC1(){ BT("MC1");      }
+function MC2(){ BT("MC2");      }
+function MC3(){ BT("MC3");      }
+function MC4(){ BT("MC4");      }
+function MC5(){ BT("MC5");      }
+function MC6(){ BT("MC6");      }
+function MC7(){ BT("MC7");      }
+function MC8(){ BT("MC8");      }
+function MC9(){ BT("MC9");      }
+function MC10(){ BT("MC10");      }
+function MC11(){ BT("MC11");      }
+function MC12(){ BT("MC12");      }
 
 function CP(){  BTall("CP");    }
 function CP1(){ BT("CP1");      }
