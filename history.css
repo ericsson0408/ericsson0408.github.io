@@ -3,8 +3,8 @@
 .HK{	display:none;	}
 .RE{	display:none;	}
 .OC{  display:none; }
-#MCall{		display:none;	}
-#CPall{		display:none;	}
-#DXIIall{	display:none;	}
-#OCall{		display:none;	}
-#REall{		display:none;	}
+#MCall{		display:none;	margin-left: 50px;}
+#CPall{		display:none;	margin-left: 50px;}
+#DXIIall{	display:none;	margin-left: 50px;}
+#OCall{		display:none;	margin-left: 50px;}
+#REall{		display:none;	margin-left: 50px;}
