@@ -46,7 +46,10 @@ function OC11(){ BT("OC11");      }
 function OC12(){ BT("OC12");      }
 function OC13(){ BT("OC13");      }
 
-function DXII(){BTall("DXII");  }
+function DD(){  BTall("DD");  }
+function DD1(){ BT("DD1");  }
+function DD2(){ BT("DD2");  }
+function DD3(){ BT("DD3");  }
 
 function RE(){  BTall("RE");    }
 function RE1(){ BT("RE1");      }
