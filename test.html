@@ -3,21 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Ericsson</title>
-     <link rel="stylesheet" href="index_html.css">
+     <link rel="stylesheet" href="test.css">
     <script src="index_html.js"></script>
   </head>
   
   <body>
-<input type='button' name='A[1]' onclick='updateSum(this)' value='1'>
-<input type='button' name='A[2]' onclick='updateSum(this)' value='2'>
-<input type='button' name='A[3]' onclick='updateSum(this)' value='3'>
-<input type='button' name='A[4]' onclick='updateSum(this)' value='4'>
+    <img src="網頁頂.jpg" id="img01">
+		<table>
+			<tbody>
+				<tr>
+					<td width="150" align="center"><a href="../index.html"><b>首頁</b></a></td>
+					<td width="150" align="center"><a href="resume.html"><b>個人簡歷</b></a></td>
+					<td width="150" align="center"><a href="history.html"><b>心情小札</b></a></td>
+          
+					<td width="150" align="center"><a href="course.html"><b>課程相關</b></a></td>
+					<td width="150" align="center"><a href="activity.html"><b>活動相關</b></a></td>
+					<td width="150" align="center"><a href="links.html"><b>常用連結</b></a></td>
+					<td width="150" align="center"><a href="information.html"><b>聯絡資訊</b></a></td>
+          #links-row-2 .box-text{display: none;  /* 平常設定不要顯示 */}
+#links-row-2 .box:hover .box-text{
 
-<script>
-function updateSum(this){
-    alert(this.name);
+display: block;  /* 當滑鼠移至該元件時，才會顯示 */
+
 }
-</script>
-</body>
+				</tr>
+			</tbody>
+		</table>
+		
+      </body>
   
 </html>
+
