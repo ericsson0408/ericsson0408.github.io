@@ -49,6 +49,6 @@ td:hover{
 
 visibility:hidden;
 }
-#web:hover~#webe{
+#web:hover+#webe{
 	display:none;
 }
