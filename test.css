@@ -1,3 +1,31 @@
+body {
+  	background-color: powderblue;
+  	background-image: url("背景.png");
+}
+p {
+  	color: black;
+	font-size: 16px;
+	font-family: 標楷體;
+}
+a{
+  	text-decoration:none;
+  	color:black;
+  	font-size: 25px;
+	margin:10px;
+}
+#img01{
+    	border-radius: 8px;
+    	height: auto;
+    	max-width:100%;
+   	 margin: auto;
+}
+table {
+    	border-radius: 8px;
+    	font-family: 'Noto Sans TC', sans-serif;
+    	margin-left: auto;
+    	margin-right: auto;
+    	background-color: rgba(100%, 100%, 100%, 0.6);
+}
 td {
     border-radius: 8px;
     font-family: 'Noto Sans TC', sans-serif;
@@ -11,4 +39,11 @@ td {
 }
 td:hover{
 	color:#FF0000;
+}
+#block{
+	position: relative;
+}
+
+#resume{
+	display:none;
 }
