@@ -1,0 +1,14 @@
+td {
+    border-radius: 8px;
+    font-family: 'Noto Sans TC', sans-serif;
+    border: 5px solid;
+    height: auto;
+    max-width: 100%;
+    vertical-align: bottom;
+    text-align: center;
+    padding: 0px;
+    color: #46a3ff;
+}
+td:hover{
+	color:#FF0000;
+}
