@@ -12,6 +12,13 @@ function BT(a){
     }
     else{document.getElementById(com).style.display="block";} 
 } 
+function OD(){  BTall("OD");    }
+function OD1(){ BT("OD1");      }
+function OD2(){ BT("OD2");      }
+function OD3(){ BT("OD3");      }
+function OD4(){ BT("OD4");      }
+function OD5(){ BT("OD5");      }
+
 function MC(){  BTall("MC");    }
 function MC1(){ BT("MC1");      }
 function MC2(){ BT("MC2");      }
