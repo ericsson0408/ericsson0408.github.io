@@ -57,6 +57,10 @@ function DD(){  BTall("DD");  }
 function DD1(){ BT("DD1");  }
 function DD2(){ BT("DD2");  }
 function DD3(){ BT("DD3");  }
+function DD4(){ BT("DD4");  }
+function DD5(){ BT("DD5");  }
+function DD6(){ BT("DD6");  }
+function DD7(){ BT("DD7");  }
 
 function RE(){  BTall("RE");    }
 function RE1(){ BT("RE1");      }
