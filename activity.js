@@ -25,7 +25,7 @@ var a=document.getElementById(id).innerHTML;
 var CYear=parseInt(a[0]+a[1]+a[2]);
 var CMonth=parseInt(a[4]+a[5]);
 var CDate=parseInt(a[7]+a[8]);
-var Ccount=(CYear-108)*365+Days(CMonth,CDate)-Days(MonthT, DateT);
+var Ccount=(CYear-109)*365+Days(CMonth,CDate)-Days(MonthT, DateT);
 return Ccount;
 }
 
