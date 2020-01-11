@@ -41,7 +41,7 @@ var a=document.getElementById(id).innerHTML;
 var CYear=parseInt(a[0]+a[1]+a[2]);
 var CMonth=parseInt(a[4]+a[5]);
 var CDate=parseInt(a[7]+a[8]);
-var Ccount=(CYear-YearT)*365+Days(CYear,CMonth,CDate)-Days(YearT,MonthT, DateT);
+var Ccount=(CYear+1911-YearT)*365+Days(CYear,CMonth,CDate)-Days(YearT,MonthT, DateT);
 return Ccount;
 }
 
