@@ -3,7 +3,16 @@ var YearT=Today.getFullYear();
 var MonthT=Today.getMonth()+1;
 var DateT=Today.getDate();
 
-function Days(Month, Date){
+function Leap(Year){
+Year=parseInt(Year);
+if (Year/4==0){
+if(Year/100==0){
+    if(Year/400==0){return 1;}
+    return 0;}
+    return 1;}
+}
+
+function Days(Year,Month, Date){
 var Day=0;
 if (Month=='2'){Day+=31;}
 if (Month=='3'){Day+=59;}
@@ -16,6 +25,7 @@ if (Month=='9'){Day+=243;}
 if (Month=='10'){Day+=273;}
 if (Month=='11'){Day+=304;}
 if (Month=='12'){Day+=334;}
+if (Month>2){Day+=Leap(Year);}
 Day+=Date;
 return Day;
 } 
@@ -25,7 +35,7 @@ var a=document.getElementById(id).innerHTML;
 var CYear=parseInt(a[0]+a[1]+a[2]);
 var CMonth=parseInt(a[4]+a[5]);
 var CDate=parseInt(a[7]+a[8]);
-var Ccount=(CYear-109)*365+Days(CMonth,CDate)-Days(MonthT, DateT);
+var Ccount=(CYear-YearT)*365+Days(CYear,CMonth,CDate)-Days(YearT,MonthT, DateT);
 return Ccount;
 }
 
@@ -36,6 +46,7 @@ document.getElementById("CD3").innerHTML="倒數"+ Count("D3") +"天";
 document.getElementById("CD4").innerHTML="倒數"+ Count("D4") +"天";
 document.getElementById("CD5").innerHTML="倒數"+ Count("D5") +"天";
 }
+
 function BTall(a){
     var com=a+'all';
     if( document.getElementById(com).style.display=="block"){
