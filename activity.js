@@ -6,9 +6,14 @@ var DateT=Today.getDate();
 function Leap(Year){
 var count=0;
 Year=parseInt(Year);
-if (Year/4==0){count+=1;
-if(Year/100==0){count-=1;
-if(Year/400==0){count+=1;}
+if (Year/4==0){
+    count+=1;
+    if(Year/100==0){
+        count-=1;
+        if(Year/400==0){
+            count+=1;
+        }
+    }
 }
     return count;
 }
