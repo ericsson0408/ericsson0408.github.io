@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Ericsson</title>
-     <link rel="stylesheet" href="index_html.css">
+    <link rel="stylesheet" href="index_html.css">
     <script src="index_html.js"></script>
+    <link rel="stylesheet" href="history.css">
+	<script src="history.js"></script>
   </head>
   
   <body>
@@ -22,21 +24,57 @@
 				</tr>
 			</tbody>
 		</table>
-    <div>
-    <p>課程大綱(一上)</p>
-			<a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=A710110&class_code=3">基礎國文</a>
-			<br><a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=A160130&class_code=1">日文三</a>
-			<br><a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=A122950&class_code=2">日文五</a>
-			<br><a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=A125400&class_code=1">日文會話</a>
-			<br><a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=F720300&class_code=">資料結構</a>
-			<br><a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=I512900&class_code=">全球視野</a>
-			<br><a href="http://course-query.acad.ncku.edu.tw/crm/course_map/course.php?dept=I5&cono=I513010">生物學一</a>
-			<br><a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=I525600&class_code=">免疫學</a>
-			<br><a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=A92H400&class_code=1">生命倫理</a>
-			<br><a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=I520500&class_code=">普通社會</a>
-			<br><a href="http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=I512700&class_code=">醫用物理</a>
-			<br><a href = "http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0108&sem=1&co_no=I512510&class_code=">習醫之道</a>
-    </div>
+    <h4 class="title">On Doctoring <button type="button" onclick="OD()">展開</button></h4>
+	<div id="ODall">
+	<h5>跟診過程 <button type="button" onclick="OD1()">展開</button></h5>
+	<p class="OD" id="OD1">
+	靜脈曲張：四五六級
+	<br>肺積水：二尖瓣狹窄
+	<br>心臟衰竭：功能指數、心臟瓣膜逆流
+	<br>器材介紹：心臟二尖瓣環EOA, durability
+	<br>自行攜帶片子：來不及上傳、無動態影像
+	<br>聽主訴原因：與病歷出入、心臟分類人例子debakey
+	<br>健保卡：掛號後查看部分、插卡才能查看完整雲端
+	
+	</p>
+	<h5>加護病房 <button type="button" onclick="OD2()">展開</button></h5>
+	<p class="OD" id="OD2">
+	葉克膜同意書
+	<br>動脈血壓偵測NBP
+	<br>FiO2定義
+	<br>PC+PEEP
+	</p>
+	<h5>習醫聚餐<button type="button" onclick="OD3()">展開</button></h5>
+	<p class="OD" id="OD3">
+	PGY兩年 各科跑 考專科
+	<br>R 內科組 外科組 考次專 （神整例外
+	<br>專科執照 繼續R 次專科 fellow
+	<br>心臟外科 醫學中心 署立醫院（斗六、台中調職
+	</p>
+	<h5>進手術室 <button type="button" onclick="OD4()">展開</button></h5>
+	<p class="OD" id="OD4">
+		心臟移植
+		<br>兩組人：開心 取心
+		<br>麻醉 IABP(腳 血壓上升) 呼吸控制
+		<br>電燒 割開/黏合(凝血)
+		<br>體外循環(連接A管V管)
+		<br>拿取心臟 生理食鹽冰
+		<br>縫合手術 不可吸收(血管不會長)
+		<br>喚醒心臟 大小年齡性別
+		<br>確認血壓 否則葉克膜
+		<br>生理食鹽水制冰機
+		<br>手術室比想像不衛生
+		<br>流血量比想像還要少
+		<br>心導管
+	</p>
+	<h5>其他部分 <button type="button" onclick="OD5()">展開</button></h5>
+	<p class="OD" id="OD5">
+	選心臟外科原因
+	<br>吃飯
+	<br>其他路徑
+	</p>
+	</div>
+	  
     <div>
     <p>考試時辰</p>
 		<p>終わり
