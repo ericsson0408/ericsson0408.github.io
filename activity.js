@@ -36,7 +36,20 @@ document.getElementById("CD3").innerHTML="倒數"+ Count("D3") +"天";
 document.getElementById("CD4").innerHTML="倒數"+ Count("D4") +"天";
 document.getElementById("CD5").innerHTML="倒數"+ Count("D5") +"天";
 }
-
+function BTall(a){
+    var com=a+'all';
+    if( document.getElementById(com).style.display=="block"){
+    document.getElementById(com).style.display="none";
+    }
+    else{document.getElementById(com).style.display="block";} 
+}
+function BT(a){
+    var com=a;
+    if( document.getElementById(com).style.display=="block"){
+    document.getElementById(com).style.display="none";
+    }
+    else{document.getElementById(com).style.display="block";} 
+} 
 function MC(){  BTall("MC");    }
 function MC1(){ BT("MC1");      }
 function MC2(){ BT("MC2");      }
