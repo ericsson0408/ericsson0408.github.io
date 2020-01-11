@@ -4,12 +4,13 @@ var MonthT=Today.getMonth()+1;
 var DateT=Today.getDate();
 
 function Leap(Year){
+var count=0;
 Year=parseInt(Year);
-if (Year/4==0){
-if(Year/100==0){
-    if(Year/400==0){return 1;}
-    return 0;}
-    return 1;}
+if (Year/4==0){count+=1;
+if(Year/100==0){count-=1;
+if(Year/400==0){count+=1;}
+}
+    return count;
 }
 
 function Days(Year,Month, Date){
