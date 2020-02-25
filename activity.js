@@ -100,3 +100,17 @@ function OC10(){ BT("OC10");      }
 function OC11(){ BT("OC11");      }
 function OC12(){ BT("OC12");      }
 function OC13(){ BT("OC13");      }
+
+function TT(){ BTall("TT");     }
+function TT1(){ BT("TT1");      }
+function TT2(){ BT("TT2");      }
+function TT3(){ BT("TT3");      }
+function TT4(){ BT("TT4");      }
+function TT5(){ BT("TT5");      }
+function TT6(){ BT("TT6");      }
+function TT7(){ BT("TT7");      }
+function TT8(){ BT("TT8");      }
+function TT9(){ BT("TT9");      }
+function TT10(){ BT("TT10");      }
+function TT11(){ BT("TT11");      }
+function TT12(){ BT("TT12");      }
