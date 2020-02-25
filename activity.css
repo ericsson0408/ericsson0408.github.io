@@ -1,7 +1,9 @@
 .MC{	display:none;	}
 .CP{	display:none;	}
 .OC{  display:none; }
+.TT{  display:none; }
 #MCall{	display:none;	margin-left: 50px;}
 #CPall{	display:none;	margin-left: 50px;}
 #OCall{	display:none;	margin-left: 50px;}
+#TTall{	display:none;	margin-left: 50px;}
 .title{margin-left: 25px;}
