@@ -114,3 +114,17 @@ function TT9(){ BT("TT9");      }
 function TT10(){ BT("TT10");      }
 function TT11(){ BT("TT11");      }
 function TT12(){ BT("TT12");      }
+
+function 4T(){ BTall("4T");     }
+function 4T1(){ BT("4T1");      }
+function 4T2(){ BT("4T2");      }
+function 4T3(){ BT("4T3");      }
+function 4T4(){ BT("4T4");      }
+function 4T5(){ BT("4T5");      }
+function 4T6(){ BT("4T6");      }
+function 4T7(){ BT("4T7");      }
+function 4T8(){ BT("4T8");      }
+function 4T9(){ BT("4T9");      }
+function 4T10(){ BT("4T10");      }
+function 4T11(){ BT("4T11");      }
+function TT12(){ BT("TT12");      }
