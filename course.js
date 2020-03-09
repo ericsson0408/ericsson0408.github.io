@@ -27,3 +27,10 @@ function RE4(){ BT("RE4");      }
 function RE5(){ BT("RE5");      }
 function RE6(){ BT("RE6");      }
 function RE7(){ BT("RE7");      }
+
+function SR(){  BTall("SR");    }
+function SR1(){ BT("SR1");      }
+function SR2(){ BT("SR2");      }
+function SR3(){ BT("SR3");      }
+function SR4(){ BT("SR4");      }
+function SR5(){ BT("SR5");      }
