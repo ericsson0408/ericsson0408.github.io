@@ -30,15 +30,15 @@
  	<div>吃什麼產生器
 	<form>
 		請勾選您想吃的項目<br>
-		<input type="checkbox" name="food" value="1" name="Product_1"> 早餐類<br>
-		<input type="checkbox" name="food" value="2" name="Product_2"> 飯食類<br>
-		<input type="checkbox" name="food" value="2" name="Product_3"> 麵食類<br>
-		<input type="checkbox" name="food" value="3" name="Product_4"> 宵夜類<br>
+		<input type="checkbox" name="food" name="Product_1"> 早餐類<br>
+		<input type="checkbox" name="food" name="Product_2"> 飯食類<br>
+		<input type="checkbox" name="food" name="Product_3"> 麵食類<br>
+		<input type="checkbox" name="food" name="Product_4"> 宵夜類<br>
 		請勾選您想要的價位<br>
-		<input type="checkbox" value="4" name="Product_5"> 很便宜<br>
-		<input type="checkbox" value="5" name="Product_6"> 中等價<br>
-		<input type="checkbox" value="6" name="Product_7"> 高價位<br>
-		<button type="button" onclick="FT1()">送出</button>
+		<input type="checkbox" name="price" name="Product_5"> 很便宜<br>
+		<input type="checkbox" name="price" name="Product_6"> 中等價<br>
+		<input type="checkbox" name="price" name="Product_7"> 高價位<br>
+		<button type="button" onclick="CAL()">送出</button>
 	</form>	
 	
 	</div>
@@ -47,33 +47,13 @@
  
 function doOutput()
 {
-        var obj=document.getElementsByName("checkbox");
-        var len = obj.length;
-        var checked = false;
-
-        for (i = 0; i < len; i++)
-        {
-            if (obj[i].checked == true)
-            {
-                checked = true;
-                break;
-            }
-        }
-        alert(checked);
-};
+        #var obj=document.getElementsByName("checkbox");
+        #var len = obj.length;
+	#obj[i].checked == true;
+        #var checked = false;
+}
     
-</script>
-
-<form name="form1" method="post" action="">
-  <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">123<br>
-  <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">456<br>
-  <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">789<br>
-  <button onclick="javascript:return doOutput()">Output</button>
-</form>
-	  
-	  
-	  
-	  
+</script>  
 	  
       </body>
   
