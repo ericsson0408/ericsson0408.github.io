@@ -68,7 +68,10 @@ document.getElementById("AnswerBox").innerHTML=number;
 <input type="button" value="顯示答案" onclick="ShowAnswer()">
 	  
 <script type="text/javascript">
-function Count(){
+function abc(){
+var obj=document.getElementsByName("test");
+if (obj[0].checked == true){kk=0;}
+if (obj[1].checked == true){kk=1;}
 var A = [];
 A[0]=["ant",0, 0, 0];
 A[1]=["bat",0, 0, 1];
@@ -81,17 +84,26 @@ A[7]=["hat",1, 1, 1];
 var B=[];
 var cc=0;
 for(i=0;i<8;i++){
-	if(A[i][1]==1){
+	if(A[i][kk]==1){
 		B[cc]=A[i][0];
 		cc=cc+1;
 	}
 }
 }
 
-document.getElementById("AnswerBox").innerHTML=number;
+document.getElementById("AnswerBox").innerHTML=B;
 }
 </script>	  
+
 	  
+<form>
+	測試123<br>
+		<input type="checkbox" name="test" name="Product_1"> 1<br>
+		<input type="checkbox" name="test" name="Product_2"> 2<br>
+		<input type="checkbox" name="test" name="Product_3"> 3<br>
+		<button type="button" onclick="abc()">送出</button>
+	字母產生器：<span id="AnswerBox">__</span>　
+</form>		  
 	
 	
 	
