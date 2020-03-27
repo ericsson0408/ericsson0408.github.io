@@ -59,10 +59,12 @@ for(i<0)
 	  
 <script type="text/javascript">
 function ShowAnswer(){
-    document.getElementById("AnswerBox").innerHTML='2';
+var date = new Date();
+var number = date.getMilliseconds();
+document.getElementById("AnswerBox").innerHTML=number;
 }
 </script>
-1+1=<span id="AnswerBox">_</span>　
+亂數產生器：<span id="AnswerBox">__</span>　
 <input type="button" value="顯示答案" onclick="ShowAnswer()">
 	  
 	  
