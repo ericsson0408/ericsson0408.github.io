@@ -43,17 +43,33 @@
 	
 	</div>
 	  <input id="one-checkbox" type="checkbox" value="好學生"/> 我是好學生
-<button id="button">點下了嗎？</button>
+<script language="JavaScript" type="text/javascript">
+ 
+function doOutput()
+{
+        var obj=document.getElementsByName("checkbox");
+        var len = obj.length;
+        var checked = false;
 
-<script>
-    $("body").on("click","#button", function(){
-        if( $("#one-checkbox").prop("checked") ){ // 回傳布林值
-            alert( "你是"+$("#one-checkbox").val() );
-        } else {
-            alert( "你不是"+$("#one-checkbox").val() );
+        for (i = 0; i < len; i++)
+        {
+            if (obj[i].checked == true)
+            {
+                checked = true;
+                break;
+            }
         }
-    });
+        alert(checked);
+};
+    
 </script>
+
+<form name="form1" method="post" action="">
+  <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">
+  <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">
+  <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">
+  <button onclick="javascript:return doOutput()">Output</button>
+</form>
 	  
 	  
 	  
