@@ -57,8 +57,9 @@ document.getElementById("AnswerBox").innerHTML=number;
 <script type="text/javascript">
 function abc(){
 var obj=document.getElementsByName("test");
-if (obj[0].checked == true){kk=0;}
-if (obj[1].checked == true){kk=1;}
+if (obj[0].checked == true){kk=1;}
+if (obj[1].checked == true){kk=2;}
+if (obj[2].checked == true){kk=3;}
 var A = [];
 A[0]=["ant",0, 0, 0];
 A[1]=["bat",0, 0, 1];
@@ -77,7 +78,7 @@ for(i=0;i<8;i++){
 	}
 }
 
-document.getElementById("AnswerBox").innerHTML=B;
+document.getElementById("Testabc").innerHTML=B;
 }
 </script>	  
 
@@ -88,7 +89,7 @@ document.getElementById("AnswerBox").innerHTML=B;
 		<input type="checkbox" name="test" name="Product_2"> 2<br>
 		<input type="checkbox" name="test" name="Product_3"> 3<br>
 		<button type="button" onclick="abc()">送出</button>
-	字母產生器：<span id="AnswerBox">__</span>　
+	字母產生器：<span id="Testabc">__</span>　
 </form>		  
 	
 	
