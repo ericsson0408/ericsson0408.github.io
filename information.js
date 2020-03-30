@@ -143,8 +143,12 @@ for(i=0;i<60;i++){if(B[i]>0){
 	C[kk]=A[i][0];
 	kk=kk+1;}
 	}
-
-document.getElementById("Eat").innerHTML=C;
+var date = new Date();
+var number = date.getMilliseconds();
+var choice = number % C.length;
+	
+	
+document.getElementById("Eat").innerHTML=C[choice];
 }	
 
 
