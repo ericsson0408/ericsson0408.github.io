@@ -56,6 +56,8 @@ function DD4(){ BT("DD4");  }
 function DD5(){ BT("DD5");  }
 function DD6(){ BT("DD6");  }
 function DD7(){ BT("DD7");  }
+function DD8(){ BT("DD8");  }
+function DD9(){ BT("DD9");  }
 
 function HK1(){ BT("HK1");      }
 function HK2(){ BT("HK2");      }
