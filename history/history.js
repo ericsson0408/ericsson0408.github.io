@@ -63,4 +63,8 @@ function HK1(){ BT("HK1");      }
 function HK2(){ BT("HK2");      }
 function HK3(){ BT("HK3");      }
 
-    
+var f = function(){
+    // do something
+}
+var elems = document.getElementsByClassName("section_title");
+for (var i=0, len=elems.length; i < len; i++) elems[i].onclick = f;    
