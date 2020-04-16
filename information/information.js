@@ -4,6 +4,15 @@ var number = date.getMilliseconds();
 document.getElementById("AnswerBox").innerHTML=number;
 }
 
+function Create(){
+var date = new Date();
+var number = date.getMilliseconds();
+document.getElementById("Status").innerHTML=遊戲開始;
+}
+
+
+
+
 function Search(){	
 var A = [];	
 A[0]=["小邁時光",1,1,1,0];
