@@ -51,6 +51,11 @@ document.getElementById("CD2").innerHTML="倒數"+ Count("D2") +"天";
 document.getElementById("CD3").innerHTML="倒數"+ Count("D3") +"天";
 document.getElementById("CD4").innerHTML="倒數"+ Count("D4") +"天";
 document.getElementById("CD5").innerHTML="倒數"+ Count("D5") +"天";
+document.getElementById("CD6").innerHTML="倒數"+ Count("D6") +"天";
+document.getElementById("CD7").innerHTML="倒數"+ Count("D7") +"天";
+document.getElementById("CD8").innerHTML="倒數"+ Count("D8") +"天";
+document.getElementById("CD9").innerHTML="倒數"+ Count("D9") +"天";
+document.getElementById("CD10").innerHTML="倒數"+ Count("D10") +"天";
 }
 
 function BTall(a){
