@@ -92,7 +92,7 @@
           cout=As+'A'+ Bs +'B';
           lowOrHi.textContent = cout;
         }
-        guesses.textContent +="("+guessCount+")"+userGuess +"->"+ cout +" ";
+        guesses.innerHTML +="("+guessCount+")"+userGuess +"->"+ cout +"<br/>";
         
         guessCount++;
         guessField.value = '';
