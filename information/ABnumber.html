@@ -82,7 +82,7 @@
           lowOrHi.textContent = cout;
           //if(userGuess < randomNumber) {lowOrHi.textContent = '再猜大一點的數吧!' ;} else if(userGuess > randomNumber) {lowOrHi.textContent = '再猜小一點的數吧!';}
         }
-        guesses.textContent += userGuess + cout +'\n';
+        guesses.textContent += "("+guessCount+")"+userGuess +"->"+ cout +" ";
         
         guessCount++;
         guessField.value = '';
