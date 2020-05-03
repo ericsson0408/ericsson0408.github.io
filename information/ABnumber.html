@@ -27,7 +27,7 @@
   <body>
     <h1>幾A幾B猜數字遊戲</h1>
 
-    <p>我們在1234-9876中隨機選一個四位不重複的數字，你有十次的機會可以進行猜測，我們會在每次猜測告訴你正確位置(A)與正確數量(B)個數。</p>
+    <p>我們在0123-9876中隨機選一個四位不重複的數字，你有十次的機會可以進行猜測，我們會在每次猜測告訴你正確位置(A)與正確數量(B)個數。</p>
 
     <div class="form">
       <label for="guessField">輸入您的猜測： </label><input type="text" id="guessField" class="guessField">
@@ -92,7 +92,7 @@
           cout=As+'A'+ Bs +'B';
           lowOrHi.textContent = cout;
         }
-        guesses.textContent += "<span>"+"("+guessCount+")"+userGuess +"->"+ cout +" <br/> " + "</span>";
+        guesses.textContent +="("+guessCount+")"+userGuess +"->"+ cout +" ";
         
         guessCount++;
         guessField.value = '';
