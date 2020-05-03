@@ -42,7 +42,7 @@
 
     <script>
 
-      let randomNumber = 1234; #Math.floor(Math.random() * 100) + 1;
+      let randomNumber = 1234; //Math.floor(Math.random() * 100) + 1;
       const guesses = document.querySelector('.guesses');
       const lastResult = document.querySelector('.lastResult');
       const lowOrHi = document.querySelector('.lowOrHi');
@@ -78,7 +78,7 @@
           for (i=0;i<4;i++){if (THENUM[i]===THEGUE[i]){As+=1;} }
           for (i=0;i<4;i++){if (THENUM.includes(THEGUE[i])){Bs+=1;}}
           lowOrHi.textContent = As+'A'+Bs+'B';
-          #if(userGuess < randomNumber) {lowOrHi.textContent = '再猜大一點的數吧!' ;} else if(userGuess > randomNumber) {lowOrHi.textContent = '再猜小一點的數吧!';}
+          //if(userGuess < randomNumber) {lowOrHi.textContent = '再猜大一點的數吧!' ;} else if(userGuess > randomNumber) {lowOrHi.textContent = '再猜小一點的數吧!';}
         }
 
         guessCount++;
