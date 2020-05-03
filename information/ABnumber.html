@@ -50,7 +50,7 @@
         num+=b.toString()
         pick.splice(a, 1);
         }
-      return parseInt(num);
+      return num;
       }
       
       let randomNumber = PICKNUM(); //Math.floor(Math.random() * 100) + 1;
@@ -63,7 +63,7 @@
       let resetButton;
 
       function checkGuess() {
-        let userGuess = Number(guessField.value);
+        let userGuess = guessField.value;
         if (guessCount === 1) {
           guesses.textContent = '前次的猜測: ';
         }
