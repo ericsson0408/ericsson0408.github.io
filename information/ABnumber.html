@@ -41,15 +41,19 @@
     </div>
 
     <script>
+      function PICKNUM(){
       pick=[0,1,2,3,4,5,6,7,8,9];
       num="";
       for(i=0;i<4;i++){
-      a=Math.floor(Math.random() * pick.length);
-      b=pick[a];
-      num+=b.toString()
-      pick.splice(a, 1);
+        a=Math.floor(Math.random() * pick.length);
+        b=pick[a];
+        num+=b.toString()
+        pick.splice(a, 1);
+        }
+      return parseInt(num);
       }
-      let randomNumber = parseInt(num); //Math.floor(Math.random() * 100) + 1;
+      
+      let randomNumber = PICKNUM(); //Math.floor(Math.random() * 100) + 1;
       const guesses = document.querySelector('.guesses');
       const lastResult = document.querySelector('.lastResult');
       const lowOrHi = document.querySelector('.lowOrHi');
@@ -89,7 +93,7 @@
           lowOrHi.textContent = cout;
           //if(userGuess < randomNumber) {lowOrHi.textContent = '再猜大一點的數吧!' ;} else if(userGuess > randomNumber) {lowOrHi.textContent = '再猜小一點的數吧!';}
         }
-        guesses.textContent += "("+guessCount+")"+userGuess +"->"+ cout +" <br />";
+        guesses.textContent += "("+guessCount+")"+userGuess +"->"+ cout;
         
         guessCount++;
         guessField.value = '';
@@ -120,7 +124,7 @@
         guessField.value = '';
         guessField.focus();
         lastResult.style.backgroundColor = 'white';
-        randomNumber = Math.floor(Math.random() * 100) + 1;
+        randomNumber = PICKNUM();
       }
 
     </script>
