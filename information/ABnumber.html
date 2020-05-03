@@ -78,10 +78,11 @@
           for (i=0;i<4;i++){if (THENUM[i]===THEGUE[i]){As+=1;} }
           for (i=0;i<4;i++){if (THENUM.includes(THEGUE[i])){Bs+=1;}}
           Bs=Bs-As;
-          lowOrHi.textContent = As+'A'+ Bs +'B';
+          cout=As+'A'+ Bs +'B';
+          lowOrHi.textContent = cout;
           //if(userGuess < randomNumber) {lowOrHi.textContent = '再猜大一點的數吧!' ;} else if(userGuess > randomNumber) {lowOrHi.textContent = '再猜小一點的數吧!';}
         }
-        guesses.textContent += userGuess + As+'A'+ Bs +'B'+'\n';
+        guesses.textContent += userGuess + cout +'\n';
         
         guessCount++;
         guessField.value = '';
