@@ -133,3 +133,17 @@ function FT9(){ BT("FT9");      }
 function FT10(){ BT("FT10");      }
 function FT11(){ BT("FT11");      }
 function FT12(){ BT("FT12");      }
+
+function YT(){ BTall("YT");     }
+function YT1(){ BT("YT1");      }
+function YT2(){ BT("YT2");      }
+function YT3(){ BT("YT3");      }
+function YT4(){ BT("YT4");      }
+function YT5(){ BT("YT5");      }
+function YT6(){ BT("YT6");      }
+function YT7(){ BT("YT7");      }
+function YT8(){ BT("YT8");      }
+function YT9(){ BT("YT9");      }
+function YT10(){ BT("YT10");      }
+function YT11(){ BT("YT11");      }
+function YT12(){ BT("YT12");      }
