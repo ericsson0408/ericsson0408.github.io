@@ -13,6 +13,10 @@ function BT(a){
     else{document.getElementById(com).style.display="block";} 
 } 
 
+function CS(){  BTall("CS");    }
+function CS1(){ BT("CS1");      }
+function CS2(){ BT("CS2");      }
+
 function SV(){  BTall("SV");    }
 function SV1(){ BT("SV1");      }
 function SV2(){ BT("SV2");      }
