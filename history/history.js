@@ -18,6 +18,7 @@ function SV1(){ BT("SV1");      }
 function SV2(){ BT("SV2");      }
 
 function DD(){  BTall("DD");  }
+function DD0(){ BT("DD0");  }
 function DD1(){ BT("DD1");  }
 function DD2(){ BT("DD2");  }
 function DD3(){ BT("DD3");  }
