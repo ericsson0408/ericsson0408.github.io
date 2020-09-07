@@ -21,20 +21,37 @@ function SV(){  BTall("SV");    }
 function SV1(){ BT("SV1");      }
 function SV2(){ BT("SV2");      }
 
-function DD(){  BTall("DD");  }
-function DD0(){ BT("DD0");  }
-function DD1(){ BT("DD1");  }
-function DD2(){ BT("DD2");  }
-function DD3(){ BT("DD3");  }
-function DD4(){ BT("DD4");  }
-function DD5(){ BT("DD5");  }
-function DD6(){ BT("DD6");  }
-function DD7(){ BT("DD7");  }
-function DD8(){ BT("DD8");  }
-function DD9(){ BT("DD9");  }
-function DD10(){ BT("DD10");  }
-function DD11(){ BT("DD11");  }
-function DD12(){ BT("DD12");  }
+function DS(){  BTall("DS");  }
+function DS0(){ BT("DS0");  }
+function DS1(){ BT("DS1");  }
+function DS2(){ BT("DS2");  }
+function DS3(){ BT("DS3");  }
+function DS4(){ BT("DS4");  }
+function DS5(){ BT("DS5");  }
+function DS6(){ BT("DS6");  }
+function DS7(){ BT("DS7");  }
+function DS8(){ BT("DS8");  }
+function DS9(){ BT("DS9");  }
+function DS10(){ BT("DS10");  }
+function DS11(){ BT("DS11");  }
+function DS12(){ BT("DS12");  }
+
+function DF(){  BTall("DF");  }
+function DF0(){ BT("DF0");  }
+function DF1(){ BT("DF1");  }
+function DF2(){ BT("DF2");  }
+function DF3(){ BT("DF3");  }
+function DF4(){ BT("DF4");  }
+function DF5(){ BT("DF5");  }
+function DF6(){ BT("DF6");  }
+function DF7(){ BT("DF7");  }
+function DF8(){ BT("DF8");  }
+function DF9(){ BT("DF9");  }
+function DF10(){ BT("DF10");  }
+function DF11(){ BT("DF11");  }
+function DF12(){ BT("DF12");  }
+
+
 
 function HK1(){ BT("HK1");      }
 function HK2(){ BT("HK2");      }
