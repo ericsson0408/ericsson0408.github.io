@@ -51,7 +51,20 @@ function DF10(){ BT("DF10");  }
 function DF11(){ BT("DF11");  }
 function DF12(){ BT("DF12");  }
 
-
+function DH(){  BTall("DH");  }
+function DH0(){ BT("DH0");  }
+function DH1(){ BT("DH1");  }
+function DH2(){ BT("DH2");  }
+function DH3(){ BT("DH3");  }
+function DH4(){ BT("DH4");  }
+function DH5(){ BT("DH5");  }
+function DH6(){ BT("DH6");  }
+function DH7(){ BT("DH7");  }
+function DH8(){ BT("DH8");  }
+function DH9(){ BT("DH9");  }
+function DH10(){ BT("DH10");  }
+function DH11(){ BT("DH11");  }
+function DH12(){ BT("DH12");  }
 
 function HK1(){ BT("HK1");      }
 function HK2(){ BT("HK2");      }
