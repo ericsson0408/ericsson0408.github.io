@@ -3,7 +3,13 @@ function BTall(a){
     if( document.getElementById(com).style.display=="block"){
     document.getElementById(com).style.display="none";
     }
-    else{document.getElementById(com).style.display="block";} 
+    else{document.getElementById(com).style.display="block";}
+    
+    if( document.getElementById(a).innerHTML=="展開"){
+        document.getElementById(a).innerHTML="收回";
+    }
+    else{document.getElementById(a).innerHTML="展開";}
+    
 }
 function BT(a){
     var com=a;
