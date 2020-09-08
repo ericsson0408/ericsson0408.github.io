@@ -1,15 +1,16 @@
+function Btext(b){
+    if( document.getElementById(b).innerHTML=="展開"){
+        document.getElementById(b).innerHTML="收回";
+    }
+    else{document.getElementById(b).innerHTML="展開";}
+}
 function BTall(a){
     var com=a+'all';
     if( document.getElementById(com).style.display=="block"){
     document.getElementById(com).style.display="none";
     }
     else{document.getElementById(com).style.display="block";}
-    
-    if( document.getElementById(a).innerHTML=="展開"){
-        document.getElementById(a).innerHTML="收回";
-    }
-    else{document.getElementById(a).innerHTML="展開";}
-    
+    Btext(a);    
 }
 function BT(a){
     var com=a;
@@ -17,6 +18,7 @@ function BT(a){
     document.getElementById(com).style.display="none";
     }
     else{document.getElementById(com).style.display="block";} 
+    Btext(a);    
 } 
 
 function CS(){  BTall("CS");    }
