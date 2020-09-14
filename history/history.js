@@ -19,7 +19,7 @@ function BT(a){
     document.getElementById(com).style.display="none";
     }
     else{document.getElementById(com).style.display="block";} 
-    Btext(a);    
+    //Btext(a);    
 } 
 
 function CS(){  BTall("CS");    }
