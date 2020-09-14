@@ -10,8 +10,9 @@ function BTall(a){
     document.getElementById(com).style.display="none";
     }
     else{document.getElementById(com).style.display="block";}
-    Btext(a);    
-}
+   
+} 
+//Btext(a);    
 function BT(a){
     var com=a;
     if( document.getElementById(com).style.display=="block"){
