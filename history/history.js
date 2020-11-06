@@ -74,6 +74,7 @@ function DH9(){ BT("DH9");  }
 function DH10(){ BT("DH10");  }
 function DH11(){ BT("DH11");  }
 function DH12(){ BT("DH12");  }
+function DH13(){ BT("DH13");  }
 
 function HK1(){ BT("HK1");      }
 function HK2(){ BT("HK2");      }
