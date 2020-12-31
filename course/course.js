@@ -18,6 +18,9 @@ function OD2(){ BT("OD2");      }
 function OD3(){ BT("OD3");      }
 function OD4(){ BT("OD4");      }
 function OD5(){ BT("OD5");      }
+function OD6(){ BT("OD6");      }
+function OD7(){ BT("OD7");      }
+function OD8(){ BT("OD8");      }
 
 function RE(){  BTall("RE");    }
 function RE1(){ BT("RE1");      }
