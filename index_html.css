@@ -5,10 +5,7 @@ body {
 p {
   	color: black;
 	font-size: 16px;
-	font-family: 微軟正黑體;
-	font-weight:bold;
-	display: flex;
-   	align-items: center;
+	font-family: 標楷體;
 }
 a{
   	text-decoration:none;
