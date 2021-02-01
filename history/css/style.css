@@ -1195,11 +1195,11 @@ ul.portfolio-image li .desc{
   background-color: pink;
 }
 .activities{
-  background: indigo;
+  background: #ABABAB;
   /*padding: 20px 0;*/
 }
 .activities a:after{
-  background-color: #527bbb;
+  background-color: indigo;
 }
 .informations{
   background: #ABABAB;
