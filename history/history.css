@@ -11,3 +11,15 @@
 #DHall{	display:none;	margin-left: 50px;}
 #HKall{	display:none;	margin-left: 50px;}
 .title{margin-left: 25px;}
+button {
+  background-color: #878787; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:5px;
+}
