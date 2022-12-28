@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan Calculator</title>
+</head>
+<body>
+  <h1>Loan Calculator</h1>
+  <p>Enter the total amount of the loan and the interest rate to calculate the annual payment:</p>
+  <label for="amount">Total Amount:</label>
+  <input type="text" id="amount" value="1000">
+  <br>
+  <label for="rate">Interest Rate (%):</label>
+  <input type="text" id="rate" value="5">
+  <br>
+  <button onclick="calculatePayment()">Calculate Payment</button>
+  <p id="result"></p>
+  <script>
+    // Define the calculatePayment function
+    function calculatePayment() {
+      // Get the total amount and interest rate from the inputs
+      let amount = document.getElementById('amount').value;
+      let rate = document.getElementById('rate').value;
+
+      // Convert the interest rate to a decimal
+      rate = rate / 100;
+
+      // Calculate the annual payment
+      let payment = (amount * rate) / (1 - Math.pow(1 + rate, -12));
+
+      // Display the annual payment
+      document.getElementById('result').innerHTML = 'The annual payment is $' + payment.toFixed(2);
+    }
+      </script>
+</body>
+</html>
