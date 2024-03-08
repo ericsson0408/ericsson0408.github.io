@@ -34,10 +34,10 @@
 
     <h2>計算最小所需達成率</h2>
 
-<p>輸入c的值:</p>
+<p>輸入Ranking的值:</p>
 <input id="c" type="number">
 
-<p>輸入b的值:</p>
+<p>輸入等級的值:</p>
 <input id="b" type="number">
 
 <button onclick="calculate()">計算</button>
@@ -49,7 +49,7 @@ function calculate() {
   var c = document.getElementById("c").value;
   var b = document.getElementById("b").value;
   var a;
-  for (a = 100.5; a >= 97; a -= 0.1) {
+  for (a = 100.5; a >= 97; a -= 0.0001) {
     var multiplier;
     if (a >= 100.5) multiplier = 0.224;
     else if (a >= 100) multiplier = 0.216;
@@ -58,9 +58,10 @@ function calculate() {
     else if (a >= 98) multiplier = 0.203;
     else if (a >= 97) multiplier = 0.20;
     else multiplier = 0.168;
-    if (Math.floor(a * multiplier * b) == c) break;
+    if (Math.floor(a * multiplier * b) <= c) break;	
   }
-  document.getElementById("result3").innerHTML = "最小的達成率為: " + a;
+  a=  Math.ceil(a*10000)/10000
+  document.getElementById("result3").innerHTML = "最小的達成率為: " + a +"%";
 }
 </script>
 
