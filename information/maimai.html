@@ -29,11 +29,44 @@
         <button type="button" onclick="calculateScore()">計算所需譜定係數</button>
     </form>
     <p id="result2"></p>
+    <p id="failed"></p>
     <p id="fourthNumber"></p>
 
+    <h2>計算最小所需達成率</h2>
+
+<p>輸入c的值:</p>
+<input id="c" type="number">
+
+<p>輸入b的值:</p>
+<input id="b" type="number">
+
+<button onclick="calculate()">計算</button>
+
+<p id="result3"></p>
+
+<script>
+function calculate() {
+  var c = document.getElementById("c").value;
+  var b = document.getElementById("b").value;
+  var a;
+  for (a = 100.5; a >= 97; a -= 0.1) {
+    var multiplier;
+    if (a >= 100.5) multiplier = 0.224;
+    else if (a >= 100) multiplier = 0.216;
+    else if (a >= 99.5) multiplier = 0.211;
+    else if (a >= 99) multiplier = 0.208;
+    else if (a >= 98) multiplier = 0.203;
+    else if (a >= 97) multiplier = 0.20;
+    else multiplier = 0.168;
+    if (Math.floor(a * multiplier * b) == c) break;
+  }
+  document.getElementById("result3").innerHTML = "最小的達成率為: " + a;
+}
+</script>
+
+	
 
 
-    
     <script>
         function calculateProduct() {
             const num1 = parseFloat(document.getElementById("number1").value);
@@ -69,24 +102,39 @@
               if (num4 >= 100.5) {
                 const level =  Math.ceil(num3 * 1000 / 22.4 / 100.5)/10;
                 document.getElementById("result2").innerText = `曲目最高Rating：${level}`;
-            } else if (num4 >= 100) {
+                if (level > 15){
+            	document.getElementById("failed").innerText = "請等到よしき也打不了的15+出現吧";
+            }} else if (num4 >= 100) {
                 const level =  Math.ceil(num3 *1000 / num4 / 21.6)/10;
                 document.getElementById("result2").innerText = `SSS：${level}`;
-            } else if (num4 >= 99.5) {
+                if (level > 15){
+            	document.getElementById("failed").innerText = "請等到よしき也打不了的15+出現吧";
+            }} else if (num4 >= 99.5) {
                 const level =  Math.ceil(num3 *1000 / num4/21.1 )/10;
                 document.getElementById("result2").innerText = `SS+：${level}`;
-            } else if (num4 >= 99) {
+                if (level > 15){
+            	document.getElementById("failed").innerText = "請等到よしき也打不了的15+出現吧";
+            }} else if (num4 >= 99) {
                 const level =  Math.ceil(num3 *1000 / num4/20.8 )/10;
                 document.getElementById("result2").innerText = `SS：${level}`;
-            } else if (num4 >= 98) {
+                if (level > 15){
+            	document.getElementById("failed").innerText = "請等到よしき也打不了的15+出現吧";
+            }} else if (num4 >= 98) {
                 const level =  Math.ceil(num3 *1000 / num4/ 20.3 )/10;
                 document.getElementById("result2").innerText = `S+：${level}`;
-            } else if (num4 >= 97) {
+                if (level > 15){
+            	document.getElementById("failed").innerText = "請等到よしき也打不了的15+出現吧";
+            }} else if (num4 >= 97) {
                 const level =  Math.ceil(num3 *1000 / num4/ 20.0 )/10;
                 document.getElementById("result2").innerText = `S：${level}`;
-            } else {
+                if (level > 15){
+            	document.getElementById("failed").innerText = "請等到よしき也打不了的15+出現吧";
+            }} else {
                 document.getElementById("result2").innerText = "打不到S的話就不要在那邊辛酸的使用計算器了";
             }
+
+
+            
         }
 
         
