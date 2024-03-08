@@ -26,10 +26,15 @@
 		    </tbody>
 	  </table>
      	<h1>Maimai分數運算</h1>
-      <label for="score">Score:</label>
-      <input type="number" id="score" name="score">
-      <label for="level">Level:</label>
-      <input type="number" id="number" name="number">
+
+	<form oninput="result.value=parseInt(score.value)+parseInt(number.value)">	
+		<label for="score">Score:</label>
+	      	<input type="number" id="score" name="score">
+	      	<label for="level">Level:</label>
+	      	<input type="number" id="number" name="number">
+  		<output name="result" for="score number"></output>
+	</form>
+     
 
 	<div style="clear:both;"></div>
 	
