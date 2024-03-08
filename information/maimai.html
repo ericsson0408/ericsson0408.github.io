@@ -18,6 +18,18 @@
     </form>
     <p id="result"></p>
 
+     <h1>請輸入MaiMai的目標跟達成率：</h1>
+    <form id="myForm2">
+        <label for="number3">目標Rating：</label>
+        <input type="number" id="number3" name="number3" required>
+        <br>
+        <label for="number4">達成率(%)：</label>
+        <input type="number" id="number4" name="number4" required>
+        <br>
+        <button type="button" onclick="calculateScore()">計算所需譜定係數</button>
+    </form>
+    <p id="result2"></p>
+    <p id="fourthNumber"></p>
 
 
 
@@ -50,7 +62,32 @@
             }
         }
 
+        function calculateScore() {
+            const num3 = parseFloat(document.getElementById("number3").value);
+            const num4 = parseFloat(document.getElementById("number4").value);
 
+              if (num4 >= 100.5) {
+                const level =  Math.ceil(num3 * 1000 / 22.4 / 100.5)/10;
+                document.getElementById("result2").innerText = `曲目最高Rating：${level}`;
+            } else if (num4 >= 100) {
+                const product =  Math.ceil(num3 *1000 / num4 / 21.6)/10;
+                document.getElementById("result2").innerText = `SSS：${level}`;
+            } else if (num4 >= 99.5) {
+                const product =  Math.ceil(num3 *1000 / num4/21.1 )/10;
+                document.getElementById("result2").innerText = `SS+：${level}`;
+            } else if (num4 >= 99) {
+                const product =  Math.ceil(num3 *1000 / num4/20.8 )/10;
+                document.getElementById("result2").innerText = `SS：${level}`;
+            } else if (num4 >= 98) {
+                const product =  Math.ceil(num3 *1000 / num4/ 20.3 )/10;
+                document.getElementById("result2").innerText = `S+：${level}`;
+            } else if (num4 >= 97) {
+                const product =  Math.ceil(num3 *1000 / num4/ 20.0 )/10;
+                document.getElementById("result2").innerText = `S：${level}`;
+            } else {
+                document.getElementById("result2").innerText = "打不到S的話就不要在那邊辛酸的使用計算器了";
+            }
+        }
 
         
     </script>
