@@ -58,7 +58,7 @@ function calculate() {
     else if (a >= 98) multiplier = 0.203;
     else if (a >= 97) multiplier = 0.20;
     else multiplier = 0.168;
-    if (Math.floor(a * multiplier * b) <= c) break;	
+    if (Math.floor(a * multiplier * b) < c) break;	
   }
   a=  Math.ceil(a*10000)/10000
   document.getElementById("result3").innerHTML = "最小的達成率為: " + a +"%";
