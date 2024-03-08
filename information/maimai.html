@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>數字積的倍數計算</title>
+    <title>MaiMai計算器</title>
 </head>
 <body>
     <h1>請輸入MaiMai的成績跟等級：</h1>
@@ -18,6 +18,22 @@
     </form>
     <p id="result"></p>
 
+     <h1>請輸入MaiMai的目標跟等級：</h1>
+    <form id="myForm">
+        <label for="number3">目標Rating：</label>
+        <input type="number" id="number3" name="number3" required>
+        <br>
+        <label for="number4">曲目定數(1.0~15.0)：</label>
+        <input type="number" id="number4" name="number4" required>
+        <br>
+        <button type="button" onclick="calculateProduct()">計算所需達成率</button>
+    </form>
+    <p id="result"></p>
+    <p id="secondNumber"></p>
+
+
+
+    
     <script>
         function calculateProduct() {
             const num1 = parseFloat(document.getElementById("number1").value);
@@ -42,9 +58,33 @@
                 const product =  Math.floor(num1 * num2 * 20.0 / 100);;
                 document.getElementById("result").innerText = `S：${product}`;
             } else {
-                document.getElementById("result").innerText = "達成率必須大於97。";
+                document.getElementById("result").innerText = "打不到S的話就不要在那邊辛酸的使用計算器了";
             }
         }
+
+        function calculateProduct() {
+            const num3 = parseFloat(document.getElementById("number1").value);
+            const num4 = parseFloat(document.getElementById("number2").value);
+
+            if (num3 > 99) {
+                const product = Math.floor(num3 * num4 * 4); // 無條件捨去
+                document.getElementById("result").innerText = `積的4倍：${product}`;
+                document.getElementById("secondNumber").innerText = `第二個數需大於 ${Math.ceil(product / num1 / 4)}`;
+            } else if (num3 > 98) {
+                const product = Math.floor(num3 * num4 * 3); // 無條件捨去
+                document.getElementById("result").innerText = `積的3倍：${product}`;
+                document.getElementById("secondNumber").innerText = `第二個數需大於 ${Math.ceil(product / num1 / 3)}`;
+            } else if (num3 > 97) {
+                const product = Math.floor(num3 * num4 * 2); // 無條件捨去
+                document.getElementById("result").innerText = `積的2倍：${product}`;
+                document.getElementById("secondNumber").innerText = `第二個數需大於 ${Math.ceil(product / num1 / 2)}`;
+            } else {
+                document.getElementById("result").innerText = "數字1必須大於97。";
+                document.getElementById("secondNumber").innerText = "";
+            }
+        }
+
+        
     </script>
 </body>
 </html>
