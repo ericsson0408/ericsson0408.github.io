@@ -6,15 +6,15 @@
     <title>數字積的倍數計算</title>
 </head>
 <body>
-    <h1>請輸入兩個數字：</h1>
+    <h1>請輸入MaiMai的成績跟等級：</h1>
     <form id="myForm">
-        <label for="number1">數字1：</label>
+        <label for="number1">達成率(97~101 %)：</label>
         <input type="number" id="number1" name="number1" required>
         <br>
-        <label for="number2">數字2：</label>
+        <label for="number2">曲目定數(1.0~15.0)：</label>
         <input type="number" id="number2" name="number2" required>
         <br>
-        <button type="button" onclick="calculateProduct()">計算積的倍數</button>
+        <button type="button" onclick="calculateProduct()">計算MaiMai Rating</button>
     </form>
     <p id="result"></p>
 
@@ -23,9 +23,9 @@
             const num1 = parseFloat(document.getElementById("number1").value);
             const num2 = parseFloat(document.getElementById("number2").value);
 
-            if (num1 > 99) {
-                const product = num1 * num2 * 4;
-                document.getElementById("result").innerText = `積的4倍：${product}`;
+            if (num1 >= 100.5) {
+                const product =  100.5 * num2 * 22.4;
+                document.getElementById("result").innerText = `曲目最高Rating：${product}`;
             } else if (num1 > 98) {
                 const product = num1 * num2 * 3;
                 document.getElementById("result").innerText = `積的3倍：${product}`;
