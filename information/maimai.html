@@ -28,7 +28,7 @@
         <br>
         <button type="button" onclick="calculateProduct()">計算所需達成率</button>
     </form>
-    <p id="result"></p>
+    <p id="result2"></p>
     <p id="fourthNumber"></p>
 
 
@@ -68,24 +68,24 @@
 
               if (num4 >= 100.5) {
                 const level =  Math.celi(num3 * 1000 / 22.4 / 100.5)/10;
-                document.getElementById("result").innerText = `曲目最高Rating：${level}`;
+                document.getElementById("result2").innerText = `曲目最高Rating：${level}`;
             } else if (num4 >= 100) {
                 const product =  Math.celi(num3 *1000 / num4 / 21.6)/10;
-                document.getElementById("result").innerText = `SSS：${level}`;
+                document.getElementById("result2").innerText = `SSS：${level}`;
             } else if (num4 >= 99.5) {
                 const product =  Math.celi(num3 *1000 / num4/21.1 )/10;
-                document.getElementById("result").innerText = `SS+：${level}`;
+                document.getElementById("result2").innerText = `SS+：${level}`;
             } else if (num4 >= 99) {
                 const product =  Math.celi(num3 *1000 / num4/20.8 )/10;
-                document.getElementById("result").innerText = `SS：${level}`;
+                document.getElementById("result2").innerText = `SS：${level}`;
             } else if (num4 >= 98) {
                 const product =  Math.celi(num3 *1000 / num4/ 20.3 )/10;
-                document.getElementById("result").innerText = `S+：${level}`;
+                document.getElementById("result2").innerText = `S+：${level}`;
             } else if (num4 >= 97) {
                 const product =  Math.celi(num3 *1000 / num4/ 20.0 )/10;
-                document.getElementById("result").innerText = `S：${level}`;
+                document.getElementById("result2").innerText = `S：${level}`;
             } else {
-                document.getElementById("result").innerText = "打不到S的話就不要在那邊辛酸的使用計算器了";
+                document.getElementById("result2").innerText = "打不到S的話就不要在那邊辛酸的使用計算器了";
             }
         }
 
