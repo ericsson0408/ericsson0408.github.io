@@ -1,75 +1,131 @@
 <!DOCTYPE html>
-<html>
-  	<head>
-    	<meta charset="utf-8">
-    	<title>Ericsson</title>
-	<link rel="icon" href="link.ico" type="image/x-icon"/ >
-	<link rel="stylesheet" href="/./index_html.css">
-	<link rel="stylesheet" href="links.css">
-    	<script src="/./index_html.js"></script>
-	<script src="links.js"></script>
-  </head>
-  
-  <body>
-    <img src="/./網頁頂4 .jpg" id="img01">
-	<table>
-		<tbody>
-		<tr>
-			<td width="150" align="center"><a href="../index.html"><b>首頁</b></a></td>
-			<td width="150" align="center"><a href="/./resume/"><b>個人簡歷</b></a></td>
-			<td width="150" align="center"><a href="/./history/"><b>心情小札</b></a></td>					
-			<td width="150" align="center"><a href="/./course/"><b>課程相關</b></a></td>
-			<td width="150" align="center"><a href="/./activity/"><b>活動相關</b></a></td>
-			<td width="150" align="center"><a href="/./links/"><b>常用連結</b></a></td>
-			<td width="150" align="center"><a href="/./information/"><b>其他資訊</b></a></td>
-		</tr>
-		</tbody>
-	</table>
-     	<h1>常用連結</h1>
-		<div id="block">
-		<div id="link1" class="link">
-			<h2>資料集合</h2>
-        		<a href="https://libgen.is/" target="_blank">原文書資料庫</a>
-			<br/><br/><a href="https://smallcollation.blogspot.com/#gsc.tab=0" target="_blank">小小整理網站</a>
-			<br/><br/><a href="https://github.com/ericsson0408/ericsson0408.github.io" target="_blank">本網站原始碼</a>
-			<br/><br/><a href="https://www.firstrade.com/content/zh-tw/welcome" target="_blank">FT</a>
-			<a href="https://www.interactivebrokers.com/cn/home.php" target="_blank">IBKR</a>
-			<a href="https://client.schwab.com/Login/SignOn/CustomerCenterLogin.aspx?chinese=y" target="_blank">CS</a>
-			<br/><br/><a href="https://www.jpmarumaru.com/tw/JPSongList.asp" target="_blank">日語歌詞</a>
-			<br/><br/><a href="https://jisho.org/" target="_blank">日文字典</a>
-		</div>
-		<div id="link2" class="link">
-        		<h2>學校程式</h2>
-			<a href="http://course-query.acad.ncku.edu.tw/qry/" target="_blank">課程查詢</a>
-			<br/><br/><a href="https://moodle.ncku.edu.tw/my/" target="_blank">成大Moodle</a>
-			<br/><br/><a href="https://qrys.ncku.edu.tw/ncku/qrys02.asp" target="_blank">成績</a>
-			<a href="https://qrys.ncku.edu.tw/ncku/histogram.asp?syear=0109&sem=2&co_no=I525700&class_code=" target="_blank">查詢</a>
-			<br/><br/><a href="https://nckuhub.com/" target="_blank">選課心得</a>
-			<br/><br/><a href="http://sys.cge.ncku.edu.tw/sfa/index.php">外轉通識</a>
-			<br/><br/><a href="http://sys.cge.ncku.edu.tw/syscge/" target="_blank">融合積點</a>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>常用連結</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", sans-serif;
+            background: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1a73e8;
+        }
+        .section {
+            background: white;
+            border-radius: 12px;
+            margin: 20px auto;
+            padding: 15px 25px;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .section h2 {
+            cursor: pointer;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .section h2::after {
+            content: '▼';
+            float: right;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+        .section.collapsed h2::after {
+            transform: rotate(-90deg);
+        }
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+            display: block;
+            transition: max-height 0.3s ease;
+        }
+        .section.collapsed ul {
+            display: none;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #1a73e8;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .copy-btn {
+            margin-left: 8px;
+            font-size: 0.8em;
+            background: #e0e0e0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 2px 6px;
+        }
+    </style>
+</head>
+<body>
 
-		</div>
-		<div id="link3" class="link">
-         		<h2>醫學系資源</h2>
-			<a href="https://stu.med.ncku.edu.tw/" target="_blank" >醫學系FTP</a>
-			<br/><br/><a href="http://sp.hosp.ncku.edu.tw/" target="_blank">Cytomine</a>
-			<br/><br/><a href="https://stu.med.ncku.edu.tw/mediawiki/index.php" target="_blank">Media Wiki</a>
-			<br/><br/><a href="https://drive.google.com/file/d/18Y0HYjQluwlWamCOGClCJf_1RtBd3aXB/view" target="_blank">交班文</a>
+    <h1>常用連結</h1>
 
-		</div>
-		<div id="link4" class="link">
-        		<h2>醫院相關</h2>
-          		<a href="http://educ.hosp.ncku.edu.tw/" target="_blank">教學中心</a>
-			<a href="https://eportfolio.hosp.ncku.edu.tw" target="_blank">電子歷程</a>
-			<br/><br/><a href="http://hisweb.hosp.ncku/Emrquery/(S(1iqtlfqkdtgn31qtdb2m1b55))/tree/tlogin.aspx" target="_blank">EMR</a>
-			<a href="http://hisweb.hosp.ncku/hisservice/common/nckuhisex/pcs/PCSPatList.aspx" target="_blank">行動查房</a>
-			<br/><br/><a href="https://web.hosp.ncku.edu.tw/nckm/EIP/nckmPhone/index.aspx?g=A" target="_blank">院內分機</a>
-			
-			
+    <div class="section">
+        <h2>資料集合</h2>
+        <ul>
+            <li><a href="http://libgen.is">原文書資料庫</a></li>
+            <li><a href="http://smallcollation.blogspot.com">小小整理網站</a></li>
+            <li><a href="http://github.com">本網站原始碼</a></li>
+            <li><a href="http://www.firstrade.com">FT</a></li>
+            <li><a href="http://www.interactivebrokers.com">IBKR</a></li>
+            <li><a href="http://client.schwab.com">CS</a></li>
+            <li><a href="http://www.jpmarumaru.com">日語歌詞</a></li>
+            <li><a href="http://jisho.org">日文字典</a></li>
+        </ul>
+    </div>
 
-		</div>
-	<div style="clear:both;"></div>
-		</div>
-  </body>
-  
+    <div class="section">
+        <h2>學校程式</h2>
+        <ul>
+            <li><a href="http://course-query.acad.ncku.edu.tw">課程查詢</a></li>
+            <li><a href="http://moodle.ncku.edu.tw">成大Moodle</a></li>
+            <li><a href="http://qrys.ncku.edu.tw">成績</a></li>
+            <li><a href="http://nckuhub.com">選課心得</a></li>
+            <li><a href="http://sys.cge.ncku.edu.tw">外轉通識</a></li>
+            <li><a href="http://sys.cge.ncku.edu.tw">融合積點</a></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>醫學系資源</h2>
+        <ul>
+            <li><a href="http://stu.med.ncku.edu.tw">醫學系FTP</a></li>
+            <li><a href="http://sp.hosp.ncku.edu.tw">Cytomine</a></li>
+            <li><a href="http://stu.med.ncku.edu.tw">Media Wiki</a></li>
+            <li><a href="http://drive.google.com">交班文</a></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>醫院相關</h2>
+        <ul>
+            <li><a href="http://educ.hosp.ncku.edu.tw">教學中心</a></li>
+            <li><a href="http://eportfolio.hosp.ncku.edu.tw">電子歷程</a></li>
+            <li><a href="http://hisweb.hosp.ncku">EMR</a></li>
+            <li><a href="http://hisweb.hosp.ncku">行動查房</a></li>
+            <li><a href="http://web.hosp.ncku.edu.tw">院內分機</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelectorAll('.section h2').forEach(header => {
+            header.addEventListener('click', () => {
+                header.parentElement.classList.toggle('collapsed');
+            });
+        });
+    </script>
+
+</body>
 </html>
