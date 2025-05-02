@@ -81,7 +81,7 @@ class SnakeGame {
             normal: { 
                 basePoints: 10,
                 baseSpeed: 0,
-                baseChance: 0.6,
+                baseChance: 0.7,
                 upgradeCost: 50,
                 chanceUpgradeCost: 200,
                 color: '#ff6b6b',
@@ -90,7 +90,7 @@ class SnakeGame {
             fast: { 
                 basePoints: 25,
                 baseSpeed: -40,
-                baseChance: 0.15,
+                baseChance: 0.1,
                 upgradeCost: 100,
                 chanceUpgradeCost: 200,
                 color: '#ffd166',
@@ -99,7 +99,7 @@ class SnakeGame {
             slow: { 
                 basePoints: 20,
                 baseSpeed: 10,
-                baseChance: 0.15,
+                baseChance: 0.1,
                 upgradeCost: 75,
                 chanceUpgradeCost: 200,
                 color: '#06d6a0',
@@ -192,7 +192,8 @@ class SnakeGame {
         document.addEventListener('keydown', (e) => this.handleKeyPress(e));
         
         // Upgrade button listeners
-        document.getElementById('upgrade-food').addEventListener('click', () => this.upgradeFood());
+        document.getElementById('upgrade-food').addEventListener('click', () => this.upgradeFood(1));
+        document.getElementById('upgrade-food-multi').addEventListener('click', () => this.upgradeFood(5));
         
         // Initialize canvas
         this.resizeCanvas();
@@ -248,7 +249,9 @@ class SnakeGame {
         this.touchStartY = 0;
         this.touchEndX = 0;
         this.touchEndY = 0;
-        this.touchThreshold = 30; // 滑動閾值
+        this.touchThreshold = 15; // 降低滑動閾值，使操作更靈敏
+        this.lastTouchTime = 0; // 記錄上次觸控時間
+        this.touchCooldown = 100; // 觸控冷卻時間（毫秒）
     }
     
     getFoodPoints(type) {
@@ -290,7 +293,7 @@ class SnakeGame {
     updateUpgradeDisplays() {
         // 更新金幣轉換率顯示
         document.getElementById('current-coin-rate').textContent = this.coinConversionRate.toFixed(1);
-        document.getElementById('next-coin-rate').textContent = (this.coinConversionRate * 1.4).toFixed(1);
+        document.getElementById('next-coin-rate').textContent = (this.coinConversionRate * 1.2).toFixed(1);
         document.getElementById('upgrade-coin-rate').textContent = `升級 (${this.getCoinConversionCost()}金幣)`;
         
         // 更新食物分數顯示
@@ -300,8 +303,14 @@ class SnakeGame {
         document.getElementById('bonus-food-points').textContent = this.getFoodPoints('bonus');
         
         // 更新升級按鈕成本
-        const upgradeCost = this.calculateFoodUpgradeCost();
-        document.getElementById('upgrade-food').textContent = `升級食物 (${upgradeCost}金幣)`;
+        const singleUpgradeCost = this.calculateFoodUpgradeCost();
+        let multiUpgradeCost = 0;
+        for (let i = 0; i < 5; i++) {
+            multiUpgradeCost += this.calculateFoodUpgradeCost(this.foodUpgradeLevels[Object.keys(this.foodUpgradeLevels)[0]] + i);
+        }
+        
+        document.getElementById('upgrade-food').textContent = `升級食物 (${singleUpgradeCost}金幣)`;
+        document.getElementById('upgrade-food-multi').textContent = `升級食物 x5 (${multiUpgradeCost}金幣)`;
         
         // 更新食物機率顯示
         document.getElementById('normal-food-chance').textContent = `${Math.round(this.getFoodChance('normal') * 100)}%`;
@@ -314,9 +323,14 @@ class SnakeGame {
         document.getElementById('coin-rate').textContent = this.coinConversionRate.toFixed(1);
     }
     
-    upgradeFood() {
-        const cost = this.calculateFoodUpgradeCost();
-        if (this.coins < cost) {
+    upgradeFood(levels = 1) {
+        // 計算總成本
+        let totalCost = 0;
+        for (let i = 0; i < levels; i++) {
+            totalCost += this.calculateFoodUpgradeCost(this.foodUpgradeLevels[Object.keys(this.foodUpgradeLevels)[0]] + i);
+        }
+        
+        if (this.coins < totalCost) {
             alert('金幣不足！');
             return;
         }
@@ -325,8 +339,8 @@ class SnakeGame {
         const foodTypes = ['normal', 'fast', 'slow', 'bonus'];
         const selectedType = foodTypes[Math.floor(Math.random() * foodTypes.length)];
         
-        this.foodUpgradeLevels[selectedType]++;
-        this.coins -= cost;
+        this.foodUpgradeLevels[selectedType] += levels;
+        this.coins -= totalCost;
         
         // 更新本地存儲
         localStorage.setItem(`${selectedType}FoodLevel`, this.foodUpgradeLevels[selectedType]);
@@ -336,7 +350,7 @@ class SnakeGame {
         this.updateUpgradeDisplays();
         this.updateCoins();
         
-        alert(`成功升級${this.foodTypes[selectedType].colorName}食物！`);
+        alert(`成功升級${this.foodTypes[selectedType].colorName}食物 ${levels} 級！`);
     }
     
     calculateFoodUpgradeCost() {
@@ -546,7 +560,17 @@ class SnakeGame {
         let statusText = '';
         switch(this.food.type) {
             case 'fast':
-                speedEffect = -40; // 加速效果
+                // 根據分數調整加速效果
+                let speedReduction = 0;
+                if (this.score >= 2000) speedReduction = 50;
+                else if (this.score >= 1000) speedReduction = 40;
+                else if (this.score >= 500) speedReduction = 30;
+                else if (this.score >= 300) speedReduction = 20;
+                else if (this.score >= 100) speedReduction = 10;
+                
+                const currentBaseSpeed = Math.max(50, this.baseSpeed - speedReduction);
+                // 加速效果為當前速度的0.4倍
+                speedEffect = -Math.floor(currentBaseSpeed * 0.4);
                 statusText = '加速中';
                 break;
             case 'slow':
@@ -924,8 +948,8 @@ class SnakeGame {
         
         // 前三種食物各分配10-20%的機率
         for (let i = 1; i < types.length; i++) {
-            const minChance = 0.1;
-            const maxChance = 0.2;
+            const minChance = 0.05;
+            const maxChance = 0.25;
             const newChance = Math.random() * (maxChance - minChance) + minChance;
             this.foodTypes[types[i]].baseChance = newChance;
             remainingChance -= newChance;
@@ -964,6 +988,7 @@ class SnakeGame {
         const touch = e.touches[0];
         this.touchStartX = touch.clientX;
         this.touchStartY = touch.clientY;
+        this.lastTouchTime = Date.now();
     }
     
     handleTouchMove(e) {
@@ -971,32 +996,43 @@ class SnakeGame {
         const touch = e.touches[0];
         this.touchEndX = touch.clientX;
         this.touchEndY = touch.clientY;
+        
+        // 如果移動距離超過閾值，立即處理方向改變
+        const deltaX = this.touchEndX - this.touchStartX;
+        const deltaY = this.touchEndY - this.touchStartY;
+        
+        if (Math.abs(deltaX) > this.touchThreshold || Math.abs(deltaY) > this.touchThreshold) {
+            this.handleTouchEnd();
+        }
     }
     
     handleTouchEnd() {
+        const currentTime = Date.now();
+        if (currentTime - this.lastTouchTime < this.touchCooldown) {
+            return; // 防止過於頻繁的觸控
+        }
+        
         const deltaX = this.touchEndX - this.touchStartX;
         const deltaY = this.touchEndY - this.touchStartY;
         
         // 判斷滑動方向
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
             // 水平滑動
-            if (Math.abs(deltaX) > this.touchThreshold) {
-                if (deltaX > 0) {
-                    this.nextDirection = 'right';
-                } else {
-                    this.nextDirection = 'left';
-                }
+            if (deltaX > 0) {
+                this.nextDirection = 'right';
+            } else {
+                this.nextDirection = 'left';
             }
         } else {
             // 垂直滑動
-            if (Math.abs(deltaY) > this.touchThreshold) {
-                if (deltaY > 0) {
-                    this.nextDirection = 'down';
-                } else {
-                    this.nextDirection = 'up';
-                }
+            if (deltaY > 0) {
+                this.nextDirection = 'down';
+            } else {
+                this.nextDirection = 'up';
             }
         }
+        
+        this.lastTouchTime = currentTime;
     }
 }
 
