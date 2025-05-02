@@ -220,9 +220,9 @@ class SnakeGame {
                 slow: 0,
                 bonus: 0
             };
-            this.foodTypes.normal.baseChance = 0.4;
-            this.foodTypes.fast.baseChance = 0.2;
-            this.foodTypes.slow.baseChance = 0.2;
+            this.foodTypes.normal.baseChance = 0.6;
+            this.foodTypes.fast.baseChance = 0.15;
+            this.foodTypes.slow.baseChance = 0.15;
             this.foodTypes.bonus.baseChance = 0.2;
             
             // 更新顯示
