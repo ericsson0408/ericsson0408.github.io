@@ -1,96 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-<title>倒數計時</title>
-<style>
-  body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-    margin: 0;
-  }
-  .container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  h1 {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  .timer {
-    font-size: 2em;
-    color: #007bff;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-  }
-  .label {
-    font-size: 0.8em;
-    color: #777;
-    margin-top: 5px;
-    display: block;
-  }
-  .time-unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒數計時</title>
+    <link rel="stylesheet" href="countdown.css">
 </head>
 <body>
-  <div class="container">
-    <h1>距離 Clerk見習結束 還有</h1>
-    <div id="countdown" class="timer">
-      <div class="time-unit">
-        <span id="days"></span>
-        <span class="label">天</span>
-      </div>
-      <div class="time-unit">
-        <span id="hours"></span>
-        <span class="label">小時</span>
-      </div>
-      <div class="time-unit">
-        <span id="minutes"></span>
-        <span class="label">分鐘</span>
-      </div>
-      <div class="time-unit">
-        <span id="seconds"></span>
-        <span class="label">秒</span>
-      </div>
+    <div class="container">
+        <h1>倒數計時</h1>
+        <div class="countdown-container">
+            <div class="countdown-card">
+                <h2>Clerk 見習結束</h2>
+                <div class="countdown" id="clerk-countdown">
+                    <div class="time-block">
+                        <div class="flip-card" id="clerk-days-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">天</span>
+                    </div>
+                    <div class="time-block">
+                        <div class="flip-card" id="clerk-hours-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">小時</span>
+                    </div>
+                    <div class="time-block">
+                        <div class="flip-card" id="clerk-minutes-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">分</span>
+                    </div>
+                    <div class="time-block">
+                        <div class="flip-card" id="clerk-seconds-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">秒</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="countdown-card">
+                <h2>去日本玩</h2>
+                <div class="countdown" id="japan-countdown">
+                    <div class="time-block">
+                        <div class="flip-card" id="japan-days-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">天</span>
+                    </div>
+                    <div class="time-block">
+                        <div class="flip-card" id="japan-hours-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">小時</span>
+                    </div>
+                    <div class="time-block">
+                        <div class="flip-card" id="japan-minutes-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">分</span>
+                    </div>
+                    <div class="time-block">
+                        <div class="flip-card" id="japan-seconds-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">秒</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="countdown-card">
+                <h2>二階國考</h2>
+                <div class="countdown" id="exam-countdown">
+                    <div class="time-block">
+                        <div class="flip-card" id="exam-days-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">天</span>
+                    </div>
+                    <div class="time-block">
+                        <div class="flip-card" id="exam-hours-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">小時</span>
+                    </div>
+                    <div class="time-block">
+                        <div class="flip-card" id="exam-minutes-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">分</span>
+                    </div>
+                    <div class="time-block">
+                        <div class="flip-card" id="exam-seconds-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">0</div>
+                                <div class="flip-card-back">0</div>
+                            </div>
+                        </div>
+                        <span class="label">秒</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <script>
-    function updateCountdown() {
-      const targetDate = new Date('2025-05-09T17:00:00+08:00'); // 設定目標日期和時間 (UTC+8 為台灣時區)
-      const now = new Date();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        document.getElementById('days').textContent = days;
-        document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
-        document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
-        document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
-      } else {
-        document.getElementById('countdown').textContent = '時間已到！';
-      }
-    }
-
-    // 初始載入時更新一次，然後每秒更新一次
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
+    <script src="countdown.js"></script>
 </body>
 </html>
