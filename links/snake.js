@@ -81,7 +81,7 @@ class SnakeGame {
             normal: { 
                 basePoints: 10,
                 baseSpeed: 0,
-                baseChance: 0.4,
+                baseChance: 0.6,
                 upgradeCost: 50,
                 chanceUpgradeCost: 200,
                 color: '#ff6b6b',
@@ -90,7 +90,7 @@ class SnakeGame {
             fast: { 
                 basePoints: 25,
                 baseSpeed: -40,
-                baseChance: 0.2,
+                baseChance: 0.15,
                 upgradeCost: 100,
                 chanceUpgradeCost: 200,
                 color: '#ffd166',
@@ -99,7 +99,7 @@ class SnakeGame {
             slow: { 
                 basePoints: 20,
                 baseSpeed: 10,
-                baseChance: 0.2,
+                baseChance: 0.15,
                 upgradeCost: 75,
                 chanceUpgradeCost: 200,
                 color: '#06d6a0',
@@ -109,7 +109,7 @@ class SnakeGame {
                 basePoints: 25,
                 baseMultiplier: 1.1,
                 baseSpeed: 0,
-                baseChance: 0.2,
+                baseChance: 0.1,
                 upgradeCost: 200,
                 chanceUpgradeCost: 200,
                 color: '#118ab2',
@@ -223,7 +223,7 @@ class SnakeGame {
             this.foodTypes.normal.baseChance = 0.6;
             this.foodTypes.fast.baseChance = 0.15;
             this.foodTypes.slow.baseChance = 0.15;
-            this.foodTypes.bonus.baseChance = 0.2;
+            this.foodTypes.bonus.baseChance = 0.1;
             
             // 更新顯示
             this.updateScore();
@@ -237,6 +237,18 @@ class SnakeGame {
         if (clearDataBtn) {
             clearDataBtn.addEventListener('click', this.clearAllData);
         }
+        
+        // 添加觸控事件監聽器
+        this.canvas.addEventListener('touchstart', (e) => this.handleTouchStart(e));
+        this.canvas.addEventListener('touchmove', (e) => this.handleTouchMove(e));
+        this.canvas.addEventListener('touchend', () => this.handleTouchEnd());
+        
+        // 觸控相關變數
+        this.touchStartX = 0;
+        this.touchStartY = 0;
+        this.touchEndX = 0;
+        this.touchEndY = 0;
+        this.touchThreshold = 30; // 滑動閾值
     }
     
     getFoodPoints(type) {
@@ -266,7 +278,7 @@ class SnakeGame {
     }
     
     getCoinConversionCost() {
-        // 基礎成本為500，每次升級成本增加40%
+        // 基礎成本為400，每次升級成本增加60%
         return Math.floor(400 * Math.pow(1.6, this.coinConversionRate - 1));
     }
     
@@ -944,6 +956,46 @@ class SnakeGame {
             alert(`升級成功！現在分數獲得 ${this.scoreMultiplier} 倍`);
         } else {
             alert('金幣不足！');
+        }
+    }
+    
+    handleTouchStart(e) {
+        e.preventDefault();
+        const touch = e.touches[0];
+        this.touchStartX = touch.clientX;
+        this.touchStartY = touch.clientY;
+    }
+    
+    handleTouchMove(e) {
+        e.preventDefault();
+        const touch = e.touches[0];
+        this.touchEndX = touch.clientX;
+        this.touchEndY = touch.clientY;
+    }
+    
+    handleTouchEnd() {
+        const deltaX = this.touchEndX - this.touchStartX;
+        const deltaY = this.touchEndY - this.touchStartY;
+        
+        // 判斷滑動方向
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            // 水平滑動
+            if (Math.abs(deltaX) > this.touchThreshold) {
+                if (deltaX > 0) {
+                    this.nextDirection = 'right';
+                } else {
+                    this.nextDirection = 'left';
+                }
+            }
+        } else {
+            // 垂直滑動
+            if (Math.abs(deltaY) > this.touchThreshold) {
+                if (deltaY > 0) {
+                    this.nextDirection = 'down';
+                } else {
+                    this.nextDirection = 'up';
+                }
+            }
         }
     }
 }
