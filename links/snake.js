@@ -267,7 +267,7 @@ class SnakeGame {
     
     getCoinConversionCost() {
         // 基礎成本為500，每次升級成本增加40%
-        return Math.floor(500 * Math.pow(1.4, this.coinConversionRate - 1));
+        return Math.floor(400 * Math.pow(1.6, this.coinConversionRate - 1));
     }
     
     getScoreMultiplierCost() {
