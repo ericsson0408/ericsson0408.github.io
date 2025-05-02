@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>倒數計時</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  .container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .timer {
+    font-size: 2em;
+    color: #007bff;
+  }
+  .label {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>距離 2025 年 5 月 9 日下午 5 點</h1>
+    <div id="countdown" class="timer">
+      <span id="days"></span><span class="label">天</span>
+      <span id="hours"></span><span class="label">小時</span>
+      <span id="minutes"></span><span class="label">分鐘</span>
+      <span id="seconds"></span><span class="label">秒</span>
+    </div>
+  </div>
+
+  <script>
+    function updateCountdown() {
+      const targetDate = new Date('2025-05-09T17:00:00+08:00'); // 設定目標日期和時間 (UTC+8 為台灣時區)
+      const now = new Date();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+        document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+        document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+      } else {
+        document.getElementById('countdown').textContent = '時間已到！';
+      }
+    }
+
+    // 初始載入時更新一次，然後每秒更新一次
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
