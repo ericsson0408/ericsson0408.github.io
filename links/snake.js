@@ -242,7 +242,7 @@ class SnakeGame {
     getFoodPoints(type) {
         const foodType = this.foodTypes[type];
         const level = this.foodUpgradeLevels[type];
-        return Math.floor(foodType.basePoints * (1 + level * 0.8));
+        return Math.floor(foodType.basePoints * (1 + level * 0.3));
     }
     
     getFoodChance(type) {
