@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動脈血液氣體 (ABG) 分析</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 15px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 120px;
+            font-size: 16px;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e6f0ff;
+            border-radius: 8px;
+            border: 1px solid #d4e6f1;
+            font-size: 16px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        #result strong {
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <h1>動脈血液氣體 (ABG) 分析</h1>
+
+    <div class="input-group">
+        <label for="ph">pH:</label>
+        <input type="number" id="ph" step="0.01">
+    </div>
+
+    <div class="input-group">
+        <label for="paco2">PaCO2 (mmHg):</label>
+        <input type="number" id="paco2">
+    </div>
+
+    <div class="input-group">
+        <label for="pao2">PaO2 (mmHg):</label>
+        <input type="number" id="pao2">
+    </div>
+
+    <div class="input-group">
+        <label for="hco3">HCO3- (mEq/L):</label>
+        <input type="number" id="hco3">
+    </div>
+
+    <button onclick="analyzeABG()">分析</button>
+
+    <div id="result"></div>
+
+    <script>
+        function analyzeABG() {
+    const pH = parseFloat(document.getElementById("ph").value);
+    const paCO2 = parseFloat(document.getElementById("paco2").value);
+    const paO2 = parseFloat(document.getElementById("pao2").value);
+    const hco3 = parseFloat(document.getElementById("hco3").value);
+    const resultDiv = document.getElementById("result");
+    let diagnosis = "";
+    let compensationInfo = "";
+
+    if (isNaN(pH) || isNaN(paCO2) || isNaN(paO2) || isNaN(hco3)) {
+        resultDiv.textContent = "請輸入所有 ABG 數值。";
+        return;
+    }
+
+    if (pH < 7.35) {
+        diagnosis += "酸血症 (Acidemia).\n";
+        if (paCO2 > 45) {
+            diagnosis += "呼吸性酸血症 (Respiratory Acidosis).\n";
+            const expectedHCO3Acute = 24 + (paCO2 - 40) * 0.1;
+            compensationInfo += `預期急性代償性 HCO3-: 約 ${expectedHCO3Acute.toFixed(1)} mEq/L.\n`;
+            if (Math.abs(hco3 - expectedHCO3Acute) > 2) {
+                compensationInfo += "HCO3- 可能有額外代謝成分的影響。\n";
+            }
+            const expectedHCO3Chronic = 24 + (paCO2 - 40) * 0.35;
+            compensationInfo += `預期慢性代償性 HCO3-: 約 ${expectedHCO3Chronic.toFixed(1)} mEq/L.\n`;
+        } else if (hco3 < 22) {
+            diagnosis += "代謝性酸血症 (Metabolic Acidosis).\n";
+            const expectedPaCO2 = 1.5 * hco3 + 8;
+            compensationInfo += `預期代償性 PaCO2: 約 ${expectedPaCO2.toFixed(1)} ± 2 mmHg (Winter's formula).\n`;
+            if (Math.abs(paCO2 - expectedPaCO2) > 2) {
+                compensationInfo += "PaCO2 可能有額外呼吸成分的影響。\n";
+            }
+        } else {
+            diagnosis += "可能是混合型酸血症或代償性酸血症.\n";
+        }
+    } else if (pH > 7.45) {
+        diagnosis += "鹼血症 (Alkalemia).\n";
+        if (paCO2 < 35) {
+            diagnosis += "呼吸性鹼血症 (Respiratory Alkalosis).\n";
+            const expectedHCO3Acute = 24 - (40 - paCO2) * 0.2;
+            compensationInfo += `預期急性代償性 HCO3-: 約 ${expectedHCO3Acute.toFixed(1)} mEq/L.\n`;
+            if (Math.abs(hco3 - expectedHCO3Acute) > 2) {
+                compensationInfo += "HCO3- 可能有額外代謝成分的影響。\n";
+            }
+            const expectedHCO3Chronic = 24 - (40 - paCO2) * 0.5;
+            compensationInfo += `預期慢性代償性 HCO3-: 約 ${expectedHCO3Chronic.toFixed(1)} mEq/L.\n`;
+        } else if (hco3 > 26) {
+            diagnosis += "代謝性鹼血症 (Metabolic Alkalosis).\n";
+            const deltaHCO3 = hco3 - 24;
+            const expectedPaCO2Increase = 0.7 * deltaHCO3;
+            const expectedPaCO2 = 40 + expectedPaCO2Increase;
+            compensationInfo += `預期代償性 PaCO2: 約 ${expectedPaCO2.toFixed(1)} mmHg (每增加 1 mEq/L HCO3-，PaCO2 上升約 0.7 mmHg).\n`;
+            if (Math.abs(paCO2 - expectedPaCO2) > 2) {
+                compensationInfo += "PaCO2 可能有額外呼吸成分的影響。\n";
+            }
+        } else {
+            diagnosis += "可能是混合型鹼血症或代償性鹼血症.\n";
+        }
+    } else {
+        diagnosis += "pH 值正常 (7.35 - 7.45).\n";
+    }
+
+    diagnosis += `PaCO2: ${paCO2} mmHg (正常值: 35-45).\n`;
+    diagnosis += `HCO3-: ${hco3} mEq/L (正常值: 22-26).\n`;
+
+    if (paO2 < 60) {
+        diagnosis += "低血氧 (Hypoxemia).\n";
+    } else {
+        diagnosis += "氧合狀況大致正常.\n";
+    }
+
+    resultDiv.textContent = "分析結果:\n" + diagnosis + compensationInfo;
+}
+    </script>
+</body>
+</html>
